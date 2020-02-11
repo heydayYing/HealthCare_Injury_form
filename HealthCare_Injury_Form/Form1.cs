@@ -26,7 +26,16 @@ namespace HealthCare_Injury_Form
         private void btnLgn_Click(object sender, EventArgs e)
         {
             SqlConnection conn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\user2\source\repos\HealthCare_Injury_Form\HealthCare_Injury_Form\Database1.mdf; Integrated Security = True");
-            SqlDataAdapter sda = new SqlDataAdapter("select count(*) from Login where username=")
+            SqlDataAdapter sda = new SqlDataAdapter("select count(*) from Login where userName='" + txtName + "' and password='" + txtPwd + "'", conn);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            if (dt.Rows[0][0].ToString() == "1")
+            {
+                this.Hide();
+                Registration regForm = new Registration();
+                regForm.Show();
+            }
+
         }
 
         private void btnExit_Click(object sender, EventArgs e)
