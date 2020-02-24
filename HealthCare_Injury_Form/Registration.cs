@@ -16,5 +16,10 @@ namespace HealthCare_Injury_Form
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

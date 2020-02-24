@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SQLite;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,14 +14,13 @@ namespace HealthCare_Injury_Form
     public class SqliteDataAccess
     {
         readonly IDbConnection database;
-        private static string LoadConnectionString(string id = "Default")
-        {
-            return ConfigurationManager.ConnectionStrings[id].ConnectionString;
-        }
-
+        
         public SqliteDataAccess()
         {
-            string cnn = LoadConnectionString();
+            string parentDir= Path.GetDirectoryName(System.Windows.Forms.Application.StartupPath);
+            string relativePath = "HealthCareDB.db";
+            string absolutePath = Path.Combine(parentDir, relativePath);
+            string cnn = string.Format("Data Source={0};Version=3;Integrated Security=True", absolutePath);
             database = new SQLiteConnection(cnn);
             database.Open();
             
