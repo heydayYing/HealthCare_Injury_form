@@ -57,8 +57,9 @@ namespace HealthCare_Injury_Form
                     result = MessageBox.Show(message, caption, buttons);
                     if (result == System.Windows.Forms.DialogResult.OK)
                     {
-                        // Closes the parent form.
-                        this.Close();
+                        // Clean the text boxes for new input
+                        txtName.Text = "";
+                        txtPwd.Text = "";
                     }
                 }
             }
