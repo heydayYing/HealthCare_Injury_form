@@ -45,6 +45,7 @@ namespace HealthCare_Injury_Form
                     this.Hide();
                     Registration regForm = new Registration();
                     regForm.Show();
+                    
                 }
                 else
                 {

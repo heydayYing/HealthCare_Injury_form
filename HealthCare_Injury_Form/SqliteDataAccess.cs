@@ -29,9 +29,8 @@ namespace HealthCare_Injury_Form
             //create people table
             cmd.CommandText = @"CREATE TABLE IF NOT EXISTS people(id INTEGER PRIMARY KEY,
                     fname TEXT(50) NOT NULL, mname TEXT, lname TEXT(50) NOT NULL, 
-                    date DateTime NOT NULL, time DateTime NOT NULL, 
-                    gender INT,
-                    phone TEXT, mobile TEXT, adress TEXT, city TEXT, province TEXT, postal TEXT)";
+                    gender TEXT NOT NULL,
+                    phone TEXT, mobile TEXT, address TEXT, city TEXT, province TEXT, postal TEXT)";
             cmd.ExecuteNonQuery();
             
             database.Close();
@@ -46,12 +45,12 @@ namespace HealthCare_Injury_Form
         }
 
         //save patient data into database
-        public int savePatient(DateTime date, DateTime time, string fname, string mname, string lname, int gender,
+        public int savePatient(string fname, string mname, string lname, string gender,
             string phone, string mobile, string address, string city, string province,string postal)
         {
-            string sqlInsert = "Insert INTO people(date, time, fname, mname, lname, gender, phone, mobile, address, city, province, postal) Values" +
-                "(@date, @time, @fname, @mname, @lname, @gender, @phone, @mobile, @address, @city, @province, @postal);  ";
-            Patient p = new Patient(date, time, fname, mname, lname, gender, phone, mobile, address, city, province, postal);
+            string sqlInsert = "Insert INTO people(fname, mname, lname, gender, phone, mobile, address, city, province, postal) Values" +
+                " (@fname, @mname, @lname, @gender, @phone, @mobile, @address, @city, @province, @postal);  ";
+            Patient p = new Patient(fname, mname, lname, gender, phone, mobile, address, city, province, postal);
             var insert = database.Execute(sqlInsert, p);
             return insert;
         }

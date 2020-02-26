@@ -36,30 +36,25 @@
             this.lblLName = new System.Windows.Forms.Label();
             this.txtLName = new System.Windows.Forms.TextBox();
             this.lblGender = new System.Windows.Forms.Label();
-            this.rdbMale = new System.Windows.Forms.RadioButton();
-            this.rdbFemale = new System.Windows.Forms.RadioButton();
-            this.lblDate = new System.Windows.Forms.Label();
-            this.datePicker = new System.Windows.Forms.DateTimePicker();
             this.lblPhone = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
             this.lblAddress = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
             this.lblCity = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtCity = new System.Windows.Forms.TextBox();
             this.lblProvince = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtProvince = new System.Windows.Forms.TextBox();
             this.lblPost = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtPost = new System.Windows.Forms.TextBox();
             this.lblMobile = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtMobile = new System.Windows.Forms.TextBox();
             this.btnNew = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnSection = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
-            this.lblTime = new System.Windows.Forms.Label();
-            this.timePicker = new System.Windows.Forms.DateTimePicker();
+            this.rdbFemale = new System.Windows.Forms.RadioButton();
+            this.rdbMale = new System.Windows.Forms.RadioButton();
             this.gpGender = new System.Windows.Forms.GroupBox();
-            this.rdbSelf = new System.Windows.Forms.RadioButton();
             this.gpGender.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -127,20 +122,144 @@
             this.lblGender.AutoSize = true;
             this.lblGender.Location = new System.Drawing.Point(75, 137);
             this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(42, 13);
+            this.lblGender.Size = new System.Drawing.Size(49, 13);
             this.lblGender.TabIndex = 7;
-            this.lblGender.Text = "Gender";
+            this.lblGender.Text = "Gender *";
             // 
-            // rdbMale
+            // lblPhone
             // 
-            this.rdbMale.AutoSize = true;
-            this.rdbMale.Location = new System.Drawing.Point(12, 19);
-            this.rdbMale.Name = "rdbMale";
-            this.rdbMale.Size = new System.Drawing.Size(48, 17);
-            this.rdbMale.TabIndex = 8;
-            this.rdbMale.TabStop = true;
-            this.rdbMale.Text = "Male";
-            this.rdbMale.UseVisualStyleBackColor = true;
+            this.lblPhone.AutoSize = true;
+            this.lblPhone.Location = new System.Drawing.Point(78, 182);
+            this.lblPhone.Name = "lblPhone";
+            this.lblPhone.Size = new System.Drawing.Size(38, 13);
+            this.lblPhone.TabIndex = 12;
+            this.lblPhone.Text = "Phone";
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.Location = new System.Drawing.Point(133, 179);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(156, 20);
+            this.txtPhone.TabIndex = 13;
+            // 
+            // lblAddress
+            // 
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Location = new System.Drawing.Point(78, 221);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(45, 13);
+            this.lblAddress.TabIndex = 14;
+            this.lblAddress.Text = "Address";
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.Location = new System.Drawing.Point(133, 218);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(145, 20);
+            this.txtAddress.TabIndex = 15;
+            // 
+            // lblCity
+            // 
+            this.lblCity.AutoSize = true;
+            this.lblCity.Location = new System.Drawing.Point(294, 218);
+            this.lblCity.Name = "lblCity";
+            this.lblCity.Size = new System.Drawing.Size(24, 13);
+            this.lblCity.TabIndex = 16;
+            this.lblCity.Text = "City";
+            // 
+            // txtCity
+            // 
+            this.txtCity.Location = new System.Drawing.Point(324, 216);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(79, 20);
+            this.txtCity.TabIndex = 17;
+            // 
+            // lblProvince
+            // 
+            this.lblProvince.AutoSize = true;
+            this.lblProvince.Location = new System.Drawing.Point(421, 219);
+            this.lblProvince.Name = "lblProvince";
+            this.lblProvince.Size = new System.Drawing.Size(49, 13);
+            this.lblProvince.TabIndex = 18;
+            this.lblProvince.Text = "Province";
+            // 
+            // txtProvince
+            // 
+            this.txtProvince.Location = new System.Drawing.Point(472, 216);
+            this.txtProvince.Name = "txtProvince";
+            this.txtProvince.Size = new System.Drawing.Size(44, 20);
+            this.txtProvince.TabIndex = 19;
+            // 
+            // lblPost
+            // 
+            this.lblPost.AutoSize = true;
+            this.lblPost.Location = new System.Drawing.Point(529, 219);
+            this.lblPost.Name = "lblPost";
+            this.lblPost.Size = new System.Drawing.Size(64, 13);
+            this.lblPost.TabIndex = 20;
+            this.lblPost.Text = "Postal Code";
+            // 
+            // txtPost
+            // 
+            this.txtPost.Location = new System.Drawing.Point(598, 216);
+            this.txtPost.Name = "txtPost";
+            this.txtPost.Size = new System.Drawing.Size(100, 20);
+            this.txtPost.TabIndex = 21;
+            // 
+            // lblMobile
+            // 
+            this.lblMobile.AutoSize = true;
+            this.lblMobile.Location = new System.Drawing.Point(336, 181);
+            this.lblMobile.Name = "lblMobile";
+            this.lblMobile.Size = new System.Drawing.Size(38, 13);
+            this.lblMobile.TabIndex = 22;
+            this.lblMobile.Text = "Mobile";
+            // 
+            // txtMobile
+            // 
+            this.txtMobile.Location = new System.Drawing.Point(380, 179);
+            this.txtMobile.Name = "txtMobile";
+            this.txtMobile.Size = new System.Drawing.Size(136, 20);
+            this.txtMobile.TabIndex = 23;
+            // 
+            // btnNew
+            // 
+            this.btnNew.Location = new System.Drawing.Point(529, 285);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(75, 23);
+            this.btnNew.TabIndex = 24;
+            this.btnNew.Text = "New";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(620, 285);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 25;
+            this.btnSave.Text = "Registration";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnSection
+            // 
+            this.btnSection.Location = new System.Drawing.Point(160, 285);
+            this.btnSection.Name = "btnSection";
+            this.btnSection.Size = new System.Drawing.Size(85, 23);
+            this.btnSection.TabIndex = 26;
+            this.btnSection.Text = "Next";
+            this.btnSection.UseVisualStyleBackColor = true;
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(75, 285);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 27;
+            this.btnBack.Text = "All Patients";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // rdbFemale
             // 
@@ -153,195 +272,26 @@
             this.rdbFemale.Text = "Female";
             this.rdbFemale.UseVisualStyleBackColor = true;
             // 
-            // lblDate
+            // rdbMale
             // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(75, 54);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(75, 13);
-            this.lblDate.TabIndex = 10;
-            this.lblDate.Text = "Accident Date";
-            // 
-            // datePicker
-            // 
-            this.datePicker.Location = new System.Drawing.Point(160, 48);
-            this.datePicker.Name = "datePicker";
-            this.datePicker.Size = new System.Drawing.Size(200, 20);
-            this.datePicker.TabIndex = 11;
-            // 
-            // lblPhone
-            // 
-            this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(78, 182);
-            this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(38, 13);
-            this.lblPhone.TabIndex = 12;
-            this.lblPhone.Text = "Phone";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(133, 179);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(156, 20);
-            this.textBox1.TabIndex = 13;
-            // 
-            // lblAddress
-            // 
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(78, 221);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(45, 13);
-            this.lblAddress.TabIndex = 14;
-            this.lblAddress.Text = "Address";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(133, 218);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(145, 20);
-            this.textBox2.TabIndex = 15;
-            // 
-            // lblCity
-            // 
-            this.lblCity.AutoSize = true;
-            this.lblCity.Location = new System.Drawing.Point(294, 218);
-            this.lblCity.Name = "lblCity";
-            this.lblCity.Size = new System.Drawing.Size(24, 13);
-            this.lblCity.TabIndex = 16;
-            this.lblCity.Text = "City";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(324, 216);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(79, 20);
-            this.textBox3.TabIndex = 17;
-            // 
-            // lblProvince
-            // 
-            this.lblProvince.AutoSize = true;
-            this.lblProvince.Location = new System.Drawing.Point(421, 219);
-            this.lblProvince.Name = "lblProvince";
-            this.lblProvince.Size = new System.Drawing.Size(49, 13);
-            this.lblProvince.TabIndex = 18;
-            this.lblProvince.Text = "Province";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(472, 216);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(44, 20);
-            this.textBox4.TabIndex = 19;
-            // 
-            // lblPost
-            // 
-            this.lblPost.AutoSize = true;
-            this.lblPost.Location = new System.Drawing.Point(529, 219);
-            this.lblPost.Name = "lblPost";
-            this.lblPost.Size = new System.Drawing.Size(64, 13);
-            this.lblPost.TabIndex = 20;
-            this.lblPost.Text = "Postal Code";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(598, 216);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 21;
-            // 
-            // lblMobile
-            // 
-            this.lblMobile.AutoSize = true;
-            this.lblMobile.Location = new System.Drawing.Point(336, 181);
-            this.lblMobile.Name = "lblMobile";
-            this.lblMobile.Size = new System.Drawing.Size(38, 13);
-            this.lblMobile.TabIndex = 22;
-            this.lblMobile.Text = "Mobile";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(380, 179);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(136, 20);
-            this.textBox6.TabIndex = 23;
-            // 
-            // btnNew
-            // 
-            this.btnNew.Location = new System.Drawing.Point(529, 285);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(75, 23);
-            this.btnNew.TabIndex = 24;
-            this.btnNew.Text = "New";
-            this.btnNew.UseVisualStyleBackColor = true;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(620, 285);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 25;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnSection
-            // 
-            this.btnSection.Location = new System.Drawing.Point(160, 285);
-            this.btnSection.Name = "btnSection";
-            this.btnSection.Size = new System.Drawing.Size(100, 23);
-            this.btnSection.TabIndex = 26;
-            this.btnSection.Text = "Next";
-            this.btnSection.UseVisualStyleBackColor = true;
-            // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(75, 285);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
-            this.btnBack.TabIndex = 27;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            // 
-            // lblTime
-            // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.Location = new System.Drawing.Point(412, 54);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(30, 13);
-            this.lblTime.TabIndex = 28;
-            this.lblTime.Text = "Time";
-            // 
-            // timePicker
-            // 
-            this.timePicker.CustomFormat = "hh:mm:ss";
-            this.timePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.timePicker.Location = new System.Drawing.Point(448, 47);
-            this.timePicker.Name = "timePicker";
-            this.timePicker.Size = new System.Drawing.Size(200, 20);
-            this.timePicker.TabIndex = 29;
-            this.timePicker.Value = new System.DateTime(2020, 2, 25, 9, 56, 0, 0);
+            this.rdbMale.AutoSize = true;
+            this.rdbMale.Location = new System.Drawing.Point(12, 19);
+            this.rdbMale.Name = "rdbMale";
+            this.rdbMale.Size = new System.Drawing.Size(48, 17);
+            this.rdbMale.TabIndex = 8;
+            this.rdbMale.TabStop = true;
+            this.rdbMale.Text = "Male";
+            this.rdbMale.UseVisualStyleBackColor = true;
             // 
             // gpGender
             // 
-            this.gpGender.Controls.Add(this.rdbSelf);
             this.gpGender.Controls.Add(this.rdbMale);
             this.gpGender.Controls.Add(this.rdbFemale);
             this.gpGender.Location = new System.Drawing.Point(145, 114);
             this.gpGender.Name = "gpGender";
-            this.gpGender.Size = new System.Drawing.Size(388, 47);
+            this.gpGender.Size = new System.Drawing.Size(153, 47);
             this.gpGender.TabIndex = 30;
             this.gpGender.TabStop = false;
-            // 
-            // rdbSelf
-            // 
-            this.rdbSelf.AutoSize = true;
-            this.rdbSelf.Location = new System.Drawing.Point(163, 19);
-            this.rdbSelf.Name = "rdbSelf";
-            this.rdbSelf.Size = new System.Drawing.Size(106, 17);
-            this.rdbSelf.TabIndex = 10;
-            this.rdbSelf.TabStop = true;
-            this.rdbSelf.Text = "Self Identification";
-            this.rdbSelf.UseVisualStyleBackColor = true;
             // 
             // Registration
             // 
@@ -349,26 +299,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.gpGender);
-            this.Controls.Add(this.timePicker);
-            this.Controls.Add(this.lblTime);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSection);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnNew);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtMobile);
             this.Controls.Add(this.lblMobile);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtPost);
             this.Controls.Add(this.lblPost);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtProvince);
             this.Controls.Add(this.lblProvince);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtCity);
             this.Controls.Add(this.lblCity);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.lblAddress);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.lblPhone);
-            this.Controls.Add(this.datePicker);
-            this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblGender);
             this.Controls.Add(this.txtLName);
             this.Controls.Add(this.lblLName);
@@ -379,7 +325,6 @@
             this.Controls.Add(this.lblFName);
             this.Name = "Registration";
             this.Text = "Registration";
-            this.Load += new System.EventHandler(this.Registration_Load);
             this.gpGender.ResumeLayout(false);
             this.gpGender.PerformLayout();
             this.ResumeLayout(false);
@@ -397,29 +342,24 @@
         private System.Windows.Forms.Label lblLName;
         private System.Windows.Forms.TextBox txtLName;
         private System.Windows.Forms.Label lblGender;
-        private System.Windows.Forms.RadioButton rdbMale;
-        private System.Windows.Forms.RadioButton rdbFemale;
-        private System.Windows.Forms.Label lblDate;
-        private System.Windows.Forms.DateTimePicker datePicker;
         private System.Windows.Forms.Label lblPhone;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label lblAddress;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label lblCity;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtCity;
         private System.Windows.Forms.Label lblProvince;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtProvince;
         private System.Windows.Forms.Label lblPost;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtPost;
         private System.Windows.Forms.Label lblMobile;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtMobile;
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnSection;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Label lblTime;
-        private System.Windows.Forms.DateTimePicker timePicker;
+        private System.Windows.Forms.RadioButton rdbFemale;
+        private System.Windows.Forms.RadioButton rdbMale;
         private System.Windows.Forms.GroupBox gpGender;
-        private System.Windows.Forms.RadioButton rdbSelf;
     }
 }
