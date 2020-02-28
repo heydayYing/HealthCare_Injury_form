@@ -28,27 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lvPatient = new System.Windows.Forms.ListView();
+            this.clnID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clnName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clnAge = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clnGender = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clnPhone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnAddNew = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // listView1
+            // lvPatient
             // 
-            this.listView1.Location = new System.Drawing.Point(109, 52);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(587, 219);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.lvPatient.Activation = System.Windows.Forms.ItemActivation.TwoClick;
+            this.lvPatient.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.clnID,
+            this.clnName,
+            this.clnAge,
+            this.clnGender,
+            this.clnPhone});
+            this.lvPatient.Location = new System.Drawing.Point(109, 52);
+            this.lvPatient.Name = "lvPatient";
+            this.lvPatient.Size = new System.Drawing.Size(587, 278);
+            this.lvPatient.TabIndex = 0;
+            this.lvPatient.UseCompatibleStateImageBehavior = false;
+            this.lvPatient.View = System.Windows.Forms.View.Details;
+            this.lvPatient.ItemActivate += new System.EventHandler(this.lvPatient_ItemClick);
+            // 
+            // clnID
+            // 
+            this.clnID.Text = "ID";
+            // 
+            // clnName
+            // 
+            this.clnName.Text = "Name";
+            this.clnName.Width = 143;
+            // 
+            // clnAge
+            // 
+            this.clnAge.Text = "Age";
+            // 
+            // clnGender
+            // 
+            this.clnGender.Text = "Gender";
+            // 
+            // clnPhone
+            // 
+            this.clnPhone.Text = "Phone";
+            this.clnPhone.Width = 161;
             // 
             // btnAddNew
             // 
             this.btnAddNew.AllowDrop = true;
-            this.btnAddNew.Location = new System.Drawing.Point(621, 313);
+            this.btnAddNew.Location = new System.Drawing.Point(621, 349);
             this.btnAddNew.Name = "btnAddNew";
             this.btnAddNew.Size = new System.Drawing.Size(75, 23);
             this.btnAddNew.TabIndex = 1;
-            this.btnAddNew.Text = "Back";
+            this.btnAddNew.Text = "Add New ";
             this.btnAddNew.UseVisualStyleBackColor = true;
+            this.btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
             // 
             // Patients
             // 
@@ -56,7 +93,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnAddNew);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.lvPatient);
             this.Name = "Patients";
             this.Text = "Patients";
             this.Load += new System.EventHandler(this.Patients_Load);
@@ -66,7 +103,12 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lvPatient;
         private System.Windows.Forms.Button btnAddNew;
+        private System.Windows.Forms.ColumnHeader clnID;
+        private System.Windows.Forms.ColumnHeader clnName;
+        private System.Windows.Forms.ColumnHeader clnGender;
+        private System.Windows.Forms.ColumnHeader clnPhone;
+        private System.Windows.Forms.ColumnHeader clnAge;
     }
 }

@@ -55,7 +55,10 @@
             this.rdbFemale = new System.Windows.Forms.RadioButton();
             this.rdbMale = new System.Windows.Forms.RadioButton();
             this.gpGender = new System.Windows.Forms.GroupBox();
+            this.lblAge = new System.Windows.Forms.Label();
+            this.nmAge = new System.Windows.Forms.NumericUpDown();
             this.gpGender.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmAge)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFName
@@ -228,7 +231,7 @@
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(75, 23);
             this.btnNew.TabIndex = 24;
-            this.btnNew.Text = "New";
+            this.btnNew.Text = "Clear";
             this.btnNew.UseVisualStyleBackColor = true;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
@@ -293,11 +296,29 @@
             this.gpGender.TabIndex = 30;
             this.gpGender.TabStop = false;
             // 
+            // lblAge
+            // 
+            this.lblAge.AutoSize = true;
+            this.lblAge.Location = new System.Drawing.Point(400, 136);
+            this.lblAge.Name = "lblAge";
+            this.lblAge.Size = new System.Drawing.Size(26, 13);
+            this.lblAge.TabIndex = 31;
+            this.lblAge.Text = "Age";
+            // 
+            // nmAge
+            // 
+            this.nmAge.Location = new System.Drawing.Point(444, 130);
+            this.nmAge.Name = "nmAge";
+            this.nmAge.Size = new System.Drawing.Size(120, 20);
+            this.nmAge.TabIndex = 32;
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.nmAge);
+            this.Controls.Add(this.lblAge);
             this.Controls.Add(this.gpGender);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSection);
@@ -325,8 +346,10 @@
             this.Controls.Add(this.lblFName);
             this.Name = "Registration";
             this.Text = "Registration";
+            this.Load += new System.EventHandler(this.Registration_Load);
             this.gpGender.ResumeLayout(false);
             this.gpGender.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmAge)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -361,5 +384,7 @@
         private System.Windows.Forms.RadioButton rdbFemale;
         private System.Windows.Forms.RadioButton rdbMale;
         private System.Windows.Forms.GroupBox gpGender;
+        private System.Windows.Forms.Label lblAge;
+        private System.Windows.Forms.NumericUpDown nmAge;
     }
 }

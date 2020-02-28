@@ -20,9 +20,12 @@ namespace HealthCare_Injury_Form
         public string City { get; set; }
         public string Province { get; set; }
         public string Postal { get; set; }
+        public int Age { get; set; }
+
+        public Patient() { }
 
         public Patient(string fname, string mname, string lname,
-            string gender, string phone, string mobile, string address, string city, string province, string post)
+            string gender, string phone, string mobile, string address, string city, string province, string post,int age)
         {
            
             Fname = fname;
@@ -35,6 +38,8 @@ namespace HealthCare_Injury_Form
             City = city;
             Province = province;
             Postal = post;
+            Age = age;
         }
+
     }
 }
