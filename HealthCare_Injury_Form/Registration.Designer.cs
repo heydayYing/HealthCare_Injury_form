@@ -253,6 +253,7 @@
             this.btnSection.TabIndex = 26;
             this.btnSection.Text = "Next";
             this.btnSection.UseVisualStyleBackColor = true;
+            this.btnSection.Click += new System.EventHandler(this.btnSection_Click);
             // 
             // btnBack
             // 

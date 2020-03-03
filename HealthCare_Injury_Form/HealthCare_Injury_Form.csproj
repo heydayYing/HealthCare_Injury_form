@@ -95,6 +95,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Initial_Exam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Initial_Exam.Designer.cs">
+      <DependentUpon>Initial_Exam.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,9 @@
     </Compile>
     <Compile Include="SqliteDataAccess.cs" />
     <Compile Include="User.cs" />
+    <EmbeddedResource Include="Initial_Exam.resx">
+      <DependentUpon>Initial_Exam.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>

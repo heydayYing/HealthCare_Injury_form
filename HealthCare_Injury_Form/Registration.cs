@@ -80,6 +80,7 @@ namespace HealthCare_Injury_Form
             rdbMale.Checked = false;rdbFemale.Checked = false;
             txtPhone.Text = null; txtMobile.Text = null; txtAddress.Text = null;
             txtCity.Text = null; txtProvince.Text = null; txtPost.Text = null;
+            this.p = null;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -90,7 +91,16 @@ namespace HealthCare_Injury_Form
 
         private void Registration_Load(object sender, EventArgs e)
         {
+            if (this.p == null)
+            {
+                btnSection.Enabled = false;
+            }
+        }
 
+        private void btnSection_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Initial_Exam(this.p).Show();
         }
     }
 }
