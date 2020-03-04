@@ -55,13 +55,16 @@
             this.rbRRPassenger = new System.Windows.Forms.RadioButton();
             this.rbFPassenger = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gbDriver = new System.Windows.Forms.GroupBox();
             this.rbBHands = new System.Windows.Forms.RadioButton();
             this.rbRHand = new System.Windows.Forms.RadioButton();
             this.rbLHand = new System.Windows.Forms.RadioButton();
             this.rbNotChecked = new System.Windows.Forms.RadioButton();
             this.rbDriver = new System.Windows.Forms.RadioButton();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.cbSCollision = new System.Windows.Forms.ComboBox();
+            this.cbFCollision = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.gbFacing = new System.Windows.Forms.GroupBox();
             this.rbFRight = new System.Windows.Forms.RadioButton();
             this.rbFLeft = new System.Windows.Forms.RadioButton();
@@ -71,44 +74,76 @@
             this.rbBHand = new System.Windows.Forms.RadioButton();
             this.rbBNo = new System.Windows.Forms.RadioButton();
             this.cbSBelt = new System.Windows.Forms.CheckBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.clbSCollision = new System.Windows.Forms.CheckedListBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.clbFCollision = new System.Windows.Forms.CheckedListBox();
             this.cbStruckBy = new System.Windows.Forms.CheckBox();
             this.cbStrick = new System.Windows.Forms.CheckBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.cbSWheel = new System.Windows.Forms.CheckBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.txtOther = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cbEmergency = new System.Windows.Forms.CheckBox();
+            this.cbABDeploy = new System.Windows.Forms.CheckBox();
+            this.cbSeatBelt = new System.Windows.Forms.CheckBox();
+            this.cbAbag = new System.Windows.Forms.CheckBox();
+            this.txtPFelt = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cbbPFelt = new System.Windows.Forms.ComboBox();
+            this.cbSBack = new System.Windows.Forms.CheckBox();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.txtOTreat = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.lbTreatment = new System.Windows.Forms.ListBox();
+            this.cbbTBy = new System.Windows.Forms.ComboBox();
+            this.cbbWtoHospital = new System.Windows.Forms.ComboBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.rbAmitNo = new System.Windows.Forms.RadioButton();
+            this.rbAmitYes = new System.Windows.Forms.RadioButton();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cbPWHopspital = new System.Windows.Forms.CheckBox();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.txtAHComments = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.btnReport = new System.Windows.Forms.Button();
             this.btSave = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.cbSWheel = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tabInit.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.gbDriver.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.gbFacing.SuspendLayout();
             this.gbBrace.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.tabPage7.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblFName
@@ -281,20 +316,24 @@
             this.tabInit.Controls.Add(this.tabPage2);
             this.tabInit.Controls.Add(this.tabPage3);
             this.tabInit.Controls.Add(this.tabPage4);
-            this.tabInit.Location = new System.Drawing.Point(262, 121);
+            this.tabInit.Controls.Add(this.tabPage5);
+            this.tabInit.Controls.Add(this.tabPage6);
+            this.tabInit.Controls.Add(this.tabPage7);
+            this.tabInit.Location = new System.Drawing.Point(3, 3);
+            this.tabInit.Multiline = true;
             this.tabInit.Name = "tabInit";
             this.tabInit.SelectedIndex = 0;
-            this.tabInit.Size = new System.Drawing.Size(490, 317);
+            this.tabInit.Size = new System.Drawing.Size(490, 323);
             this.tabInit.TabIndex = 17;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.dateTimePicker1);
             this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 40);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(482, 291);
+            this.tabPage1.Size = new System.Drawing.Size(482, 279);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Initial Date";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -318,10 +357,10 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.groupBox1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 40);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(482, 291);
+            this.tabPage2.Size = new System.Drawing.Size(482, 279);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Position";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -332,7 +371,7 @@
             this.groupBox1.Controls.Add(this.rbRRPassenger);
             this.groupBox1.Controls.Add(this.rbFPassenger);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.groupBox2);
+            this.groupBox1.Controls.Add(this.gbDriver);
             this.groupBox1.Controls.Add(this.rbDriver);
             this.groupBox1.Location = new System.Drawing.Point(6, 28);
             this.groupBox1.Name = "groupBox1";
@@ -383,17 +422,17 @@
             this.label6.TabIndex = 2;
             this.label6.Text = "◦ Hands on steering wheel?";
             // 
-            // groupBox2
+            // gbDriver
             // 
-            this.groupBox2.Controls.Add(this.rbBHands);
-            this.groupBox2.Controls.Add(this.rbRHand);
-            this.groupBox2.Controls.Add(this.rbLHand);
-            this.groupBox2.Controls.Add(this.rbNotChecked);
-            this.groupBox2.Location = new System.Drawing.Point(63, 55);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(387, 42);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
+            this.gbDriver.Controls.Add(this.rbBHands);
+            this.gbDriver.Controls.Add(this.rbRHand);
+            this.gbDriver.Controls.Add(this.rbLHand);
+            this.gbDriver.Controls.Add(this.rbNotChecked);
+            this.gbDriver.Location = new System.Drawing.Point(63, 55);
+            this.gbDriver.Name = "gbDriver";
+            this.gbDriver.Size = new System.Drawing.Size(387, 42);
+            this.gbDriver.TabIndex = 1;
+            this.gbDriver.TabStop = false;
             // 
             // rbBHands
             // 
@@ -449,31 +488,68 @@
             this.rbDriver.TabStop = true;
             this.rbDriver.Text = "driver";
             this.rbDriver.UseVisualStyleBackColor = true;
+            this.rbDriver.CheckedChanged += new System.EventHandler(this.rbDriver_CheckedChanged);
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.cbSCollision);
+            this.tabPage3.Controls.Add(this.cbFCollision);
+            this.tabPage3.Controls.Add(this.label7);
             this.tabPage3.Controls.Add(this.gbFacing);
             this.tabPage3.Controls.Add(this.gbBrace);
             this.tabPage3.Controls.Add(this.cbSBelt);
-            this.tabPage3.Controls.Add(this.label8);
-            this.tabPage3.Controls.Add(this.clbSCollision);
-            this.tabPage3.Controls.Add(this.label7);
-            this.tabPage3.Controls.Add(this.clbFCollision);
             this.tabPage3.Controls.Add(this.cbStruckBy);
             this.tabPage3.Controls.Add(this.cbStrick);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 40);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(482, 291);
+            this.tabPage3.Size = new System.Drawing.Size(482, 279);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Head Rotation and angle of Impact";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // cbSCollision
+            // 
+            this.cbSCollision.FormattingEnabled = true;
+            this.cbSCollision.Items.AddRange(new object[] {
+            "Front",
+            "Back",
+            "Left",
+            "Back"});
+            this.cbSCollision.Location = new System.Drawing.Point(219, 77);
+            this.cbSCollision.Name = "cbSCollision";
+            this.cbSCollision.Size = new System.Drawing.Size(121, 21);
+            this.cbSCollision.TabIndex = 12;
+            this.cbSCollision.Text = "Second Collision";
+            // 
+            // cbFCollision
+            // 
+            this.cbFCollision.FormattingEnabled = true;
+            this.cbFCollision.Items.AddRange(new object[] {
+            "Front",
+            "Back",
+            "Left",
+            "Right"});
+            this.cbFCollision.Location = new System.Drawing.Point(54, 77);
+            this.cbFCollision.Name = "cbFCollision";
+            this.cbFCollision.Size = new System.Drawing.Size(121, 21);
+            this.cbFCollision.TabIndex = 11;
+            this.cbFCollision.Text = "First Collision";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(51, 60);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(170, 13);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "If Yes, specify the collision position";
             // 
             // gbFacing
             // 
             this.gbFacing.Controls.Add(this.rbFRight);
             this.gbFacing.Controls.Add(this.rbFLeft);
             this.gbFacing.Controls.Add(this.rbFStraight);
-            this.gbFacing.Location = new System.Drawing.Point(36, 241);
+            this.gbFacing.Location = new System.Drawing.Point(36, 189);
             this.gbFacing.Name = "gbFacing";
             this.gbFacing.Size = new System.Drawing.Size(428, 46);
             this.gbFacing.TabIndex = 9;
@@ -518,7 +594,7 @@
             this.gbBrace.Controls.Add(this.rbBFeet);
             this.gbBrace.Controls.Add(this.rbBHand);
             this.gbBrace.Controls.Add(this.rbBNo);
-            this.gbBrace.Location = new System.Drawing.Point(36, 189);
+            this.gbBrace.Location = new System.Drawing.Point(36, 137);
             this.gbBrace.Name = "gbBrace";
             this.gbBrace.Size = new System.Drawing.Size(428, 46);
             this.gbBrace.TabIndex = 8;
@@ -561,57 +637,12 @@
             // cbSBelt
             // 
             this.cbSBelt.AutoSize = true;
-            this.cbSBelt.Location = new System.Drawing.Point(36, 166);
+            this.cbSBelt.Location = new System.Drawing.Point(36, 114);
             this.cbSBelt.Name = "cbSBelt";
             this.cbSBelt.Size = new System.Drawing.Size(170, 17);
             this.cbSBelt.TabIndex = 7;
             this.cbSBelt.Text = "Were you wearing a seat belt?";
             this.cbSBelt.UseVisualStyleBackColor = true;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(228, 61);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(85, 13);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Second Collision";
-            // 
-            // clbSCollision
-            // 
-            this.clbSCollision.FormattingEnabled = true;
-            this.clbSCollision.Items.AddRange(new object[] {
-            "Not Selected",
-            "Front",
-            "Left",
-            "Rear",
-            "Right"});
-            this.clbSCollision.Location = new System.Drawing.Point(231, 77);
-            this.clbSCollision.Name = "clbSCollision";
-            this.clbSCollision.Size = new System.Drawing.Size(120, 79);
-            this.clbSCollision.TabIndex = 5;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(59, 61);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 13);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "First Collision";
-            // 
-            // clbFCollision
-            // 
-            this.clbFCollision.FormattingEnabled = true;
-            this.clbFCollision.Items.AddRange(new object[] {
-            "Front",
-            "Left",
-            "Back",
-            "Right"});
-            this.clbFCollision.Location = new System.Drawing.Point(62, 77);
-            this.clbFCollision.Name = "clbFCollision";
-            this.clbFCollision.Size = new System.Drawing.Size(120, 79);
-            this.clbFCollision.TabIndex = 3;
             // 
             // cbStruckBy
             // 
@@ -655,12 +686,516 @@
             this.tabPage4.Controls.Add(this.cbSWheel);
             this.tabPage4.Controls.Add(this.label10);
             this.tabPage4.Controls.Add(this.label9);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Location = new System.Drawing.Point(4, 40);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(482, 291);
+            this.tabPage4.Size = new System.Drawing.Size(482, 279);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Hit Items";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(184, 109);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(279, 20);
+            this.textBox9.TabIndex = 19;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(184, 227);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(279, 20);
+            this.textBox8.TabIndex = 18;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(184, 203);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(279, 20);
+            this.textBox7.TabIndex = 17;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(184, 178);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(279, 20);
+            this.textBox6.TabIndex = 16;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(184, 155);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(279, 20);
+            this.textBox5.TabIndex = 15;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(184, 133);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(279, 20);
+            this.textBox4.TabIndex = 14;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(184, 84);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(279, 20);
+            this.textBox3.TabIndex = 13;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(184, 60);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(279, 20);
+            this.textBox2.TabIndex = 12;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(184, 36);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(279, 20);
+            this.textBox1.TabIndex = 11;
+            // 
+            // checkBox9
+            // 
+            this.checkBox9.AutoSize = true;
+            this.checkBox9.Location = new System.Drawing.Point(2, 230);
+            this.checkBox9.Name = "checkBox9";
+            this.checkBox9.Size = new System.Drawing.Size(188, 17);
+            this.checkBox9.TabIndex = 10;
+            this.checkBox9.Text = "other.. enter a complete sentence.";
+            this.checkBox9.UseVisualStyleBackColor = true;
+            // 
+            // checkBox8
+            // 
+            this.checkBox8.AutoSize = true;
+            this.checkBox8.Location = new System.Drawing.Point(3, 205);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(76, 17);
+            this.checkBox8.TabIndex = 9;
+            this.checkBox8.Text = "dashboard";
+            this.checkBox8.UseVisualStyleBackColor = true;
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Location = new System.Drawing.Point(3, 181);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(44, 17);
+            this.checkBox7.TabIndex = 8;
+            this.checkBox7.Text = "roof";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(3, 157);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(107, 17);
+            this.checkBox6.TabIndex = 7;
+            this.checkBox6.Text = "right side window";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Location = new System.Drawing.Point(3, 134);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(101, 17);
+            this.checkBox5.TabIndex = 6;
+            this.checkBox5.Text = "left side window";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(3, 110);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(92, 17);
+            this.checkBox4.TabIndex = 5;
+            this.checkBox4.Text = "right side door";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(3, 86);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(86, 17);
+            this.checkBox3.TabIndex = 4;
+            this.checkBox3.Text = "left side door";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(3, 62);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(75, 17);
+            this.checkBox2.TabIndex = 3;
+            this.checkBox2.Text = "windshield";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // cbSWheel
+            // 
+            this.cbSWheel.AutoSize = true;
+            this.cbSWheel.Location = new System.Drawing.Point(3, 38);
+            this.cbSWheel.Name = "cbSWheel";
+            this.cbSWheel.Size = new System.Drawing.Size(94, 17);
+            this.cbSWheel.TabIndex = 2;
+            this.cbSWheel.Text = "steering wheel";
+            this.cbSWheel.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(48, 22);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(201, 13);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "ie. the patient struck the steering wheel...";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(3, 9);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(387, 13);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Check off the item and complete the sentence with the body part...";
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.txtOther);
+            this.tabPage5.Controls.Add(this.label13);
+            this.tabPage5.Controls.Add(this.label12);
+            this.tabPage5.Controls.Add(this.cbEmergency);
+            this.tabPage5.Controls.Add(this.cbABDeploy);
+            this.tabPage5.Controls.Add(this.cbSeatBelt);
+            this.tabPage5.Controls.Add(this.cbAbag);
+            this.tabPage5.Controls.Add(this.txtPFelt);
+            this.tabPage5.Controls.Add(this.label11);
+            this.tabPage5.Controls.Add(this.cbbPFelt);
+            this.tabPage5.Controls.Add(this.cbSBack);
+            this.tabPage5.Location = new System.Drawing.Point(4, 40);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(482, 279);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Vehicle status";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // txtOther
+            // 
+            this.txtOther.Location = new System.Drawing.Point(74, 231);
+            this.txtOther.Name = "txtOther";
+            this.txtOther.Size = new System.Drawing.Size(369, 20);
+            this.txtOther.TabIndex = 10;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(36, 231);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(33, 13);
+            this.label13.TabIndex = 9;
+            this.label13.Text = "Other";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(36, 138);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(75, 13);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "Patient Feel";
+            // 
+            // cbEmergency
+            // 
+            this.cbEmergency.AutoSize = true;
+            this.cbEmergency.Location = new System.Drawing.Point(36, 114);
+            this.cbEmergency.Name = "cbEmergency";
+            this.cbEmergency.Size = new System.Drawing.Size(214, 17);
+            this.cbEmergency.TabIndex = 7;
+            this.cbEmergency.Text = "Emergency personal used \"jaws of Life\"";
+            this.cbEmergency.UseVisualStyleBackColor = true;
+            // 
+            // cbABDeploy
+            // 
+            this.cbABDeploy.AutoSize = true;
+            this.cbABDeploy.Location = new System.Drawing.Point(36, 90);
+            this.cbABDeploy.Name = "cbABDeploy";
+            this.cbABDeploy.Size = new System.Drawing.Size(126, 17);
+            this.cbABDeploy.TabIndex = 6;
+            this.cbABDeploy.Text = "The air bag deployed";
+            this.cbABDeploy.UseVisualStyleBackColor = true;
+            // 
+            // cbSeatBelt
+            // 
+            this.cbSeatBelt.AutoSize = true;
+            this.cbSeatBelt.Location = new System.Drawing.Point(36, 66);
+            this.cbSeatBelt.Name = "cbSeatBelt";
+            this.cbSeatBelt.Size = new System.Drawing.Size(180, 17);
+            this.cbSeatBelt.TabIndex = 5;
+            this.cbSeatBelt.Text = "The car has visible seat belt sign";
+            this.cbSeatBelt.UseVisualStyleBackColor = true;
+            // 
+            // cbAbag
+            // 
+            this.cbAbag.AutoSize = true;
+            this.cbAbag.Location = new System.Drawing.Point(36, 42);
+            this.cbAbag.Name = "cbAbag";
+            this.cbAbag.Size = new System.Drawing.Size(133, 17);
+            this.cbAbag.TabIndex = 4;
+            this.cbAbag.Text = "The car has no air bag";
+            this.cbAbag.UseVisualStyleBackColor = true;
+            // 
+            // txtPFelt
+            // 
+            this.txtPFelt.Location = new System.Drawing.Point(189, 195);
+            this.txtPFelt.Name = "txtPFelt";
+            this.txtPFelt.Size = new System.Drawing.Size(254, 20);
+            this.txtPFelt.TabIndex = 3;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(33, 198);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(150, 13);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "He/she also stated that he felt";
+            // 
+            // cbbPFelt
+            // 
+            this.cbbPFelt.FormattingEnabled = true;
+            this.cbbPFelt.Items.AddRange(new object[] {
+            "dizzy/dazed",
+            "disoriented",
+            "unconscious",
+            "nervous",
+            "nouseous",
+            "upset",
+            "weak"});
+            this.cbbPFelt.Location = new System.Drawing.Point(36, 163);
+            this.cbbPFelt.Name = "cbbPFelt";
+            this.cbbPFelt.Size = new System.Drawing.Size(250, 21);
+            this.cbbPFelt.TabIndex = 1;
+            this.cbbPFelt.Text = "Immediately following the accident patient felt";
+            // 
+            // cbSBack
+            // 
+            this.cbSBack.AutoSize = true;
+            this.cbSBack.Location = new System.Drawing.Point(36, 19);
+            this.cbSBack.Name = "cbSBack";
+            this.cbSBack.Size = new System.Drawing.Size(169, 17);
+            this.cbSBack.TabIndex = 0;
+            this.cbSBack.Text = "The seat back bend / break? ";
+            this.cbSBack.UseVisualStyleBackColor = true;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.txtOTreat);
+            this.tabPage6.Controls.Add(this.label17);
+            this.tabPage6.Controls.Add(this.label16);
+            this.tabPage6.Controls.Add(this.lbTreatment);
+            this.tabPage6.Controls.Add(this.cbbTBy);
+            this.tabPage6.Controls.Add(this.cbbWtoHospital);
+            this.tabPage6.Controls.Add(this.textBox11);
+            this.tabPage6.Controls.Add(this.label15);
+            this.tabPage6.Controls.Add(this.groupBox3);
+            this.tabPage6.Controls.Add(this.textBox10);
+            this.tabPage6.Controls.Add(this.label14);
+            this.tabPage6.Controls.Add(this.cbPWHopspital);
+            this.tabPage6.Location = new System.Drawing.Point(4, 40);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(482, 279);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Hospital Section";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // txtOTreat
+            // 
+            this.txtOTreat.Location = new System.Drawing.Point(164, 227);
+            this.txtOTreat.Multiline = true;
+            this.txtOTreat.Name = "txtOTreat";
+            this.txtOTreat.Size = new System.Drawing.Size(288, 34);
+            this.txtOTreat.TabIndex = 12;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(29, 231);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(122, 13);
+            this.label17.TabIndex = 11;
+            this.label17.Text = "Other hospital treatment:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(29, 194);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(126, 13);
+            this.label16.TabIndex = 10;
+            this.label16.Text = "Select hospital treatment.";
+            // 
+            // lbTreatment
+            // 
+            this.lbTreatment.FormattingEnabled = true;
+            this.lbTreatment.Items.AddRange(new object[] {
+            "none",
+            "placed in a cervical collar",
+            "x-rayed",
+            "given stitches ",
+            "bandages",
+            "given pain medication",
+            "given instructions regarding concussions",
+            "given instructions regarding sprains and strains ",
+            "Physical Therapy",
+            "instructed to call a Orthopedic Surgeon",
+            "instructed to call a private physician",
+            "referred to this office for treatment"});
+            this.lbTreatment.Location = new System.Drawing.Point(164, 178);
+            this.lbTreatment.Name = "lbTreatment";
+            this.lbTreatment.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.lbTreatment.Size = new System.Drawing.Size(288, 43);
+            this.lbTreatment.TabIndex = 9;
+            // 
+            // cbbTBy
+            // 
+            this.cbbTBy.FormattingEnabled = true;
+            this.cbbTBy.Items.AddRange(new object[] {
+            "police car",
+            "private transportation",
+            "ambulance"});
+            this.cbbTBy.Location = new System.Drawing.Point(32, 152);
+            this.cbbTBy.Name = "cbbTBy";
+            this.cbbTBy.Size = new System.Drawing.Size(121, 21);
+            this.cbbTBy.TabIndex = 8;
+            this.cbbTBy.Text = "Transported by:";
+            // 
+            // cbbWtoHospital
+            // 
+            this.cbbWtoHospital.FormattingEnabled = true;
+            this.cbbWtoHospital.Items.AddRange(new object[] {
+            "at time of accident",
+            "the next day",
+            "two days later",
+            " three days later",
+            "about a week later"});
+            this.cbbWtoHospital.Location = new System.Drawing.Point(32, 124);
+            this.cbbWtoHospital.Name = "cbbWtoHospital";
+            this.cbbWtoHospital.Size = new System.Drawing.Size(252, 21);
+            this.cbbWtoHospital.TabIndex = 7;
+            this.cbbWtoHospital.Text = "Choose When the patient went to hospital";
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(287, 86);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(165, 20);
+            this.textBox11.TabIndex = 6;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(284, 66);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(171, 13);
+            this.label15.TabIndex = 5;
+            this.label15.Text = "If yes, how long? (ie. Three Days..)";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.rbAmitNo);
+            this.groupBox3.Controls.Add(this.rbAmitYes);
+            this.groupBox3.Location = new System.Drawing.Point(32, 66);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(232, 40);
+            this.groupBox3.TabIndex = 4;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Was the patient admitted to the hospital?";
+            // 
+            // rbAmitNo
+            // 
+            this.rbAmitNo.AutoSize = true;
+            this.rbAmitNo.Location = new System.Drawing.Point(72, 20);
+            this.rbAmitNo.Name = "rbAmitNo";
+            this.rbAmitNo.Size = new System.Drawing.Size(39, 17);
+            this.rbAmitNo.TabIndex = 1;
+            this.rbAmitNo.TabStop = true;
+            this.rbAmitNo.Text = "No";
+            this.rbAmitNo.UseVisualStyleBackColor = true;
+            // 
+            // rbAmitYes
+            // 
+            this.rbAmitYes.AutoSize = true;
+            this.rbAmitYes.Location = new System.Drawing.Point(22, 20);
+            this.rbAmitYes.Name = "rbAmitYes";
+            this.rbAmitYes.Size = new System.Drawing.Size(43, 17);
+            this.rbAmitYes.TabIndex = 0;
+            this.rbAmitYes.TabStop = true;
+            this.rbAmitYes.Text = "Yes";
+            this.rbAmitYes.UseVisualStyleBackColor = true;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(42, 40);
+            this.textBox10.Multiline = true;
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(413, 20);
+            this.textBox10.TabIndex = 2;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(29, 23);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(440, 13);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Hospital Name: (the full name must be entered ie. [foo Medical Center], or [foo b" +
+    "ar Hospital].)";
+            // 
+            // cbPWHopspital
+            // 
+            this.cbPWHopspital.AutoSize = true;
+            this.cbPWHopspital.Location = new System.Drawing.Point(29, 3);
+            this.cbPWHopspital.Name = "cbPWHopspital";
+            this.cbPWHopspital.Size = new System.Drawing.Size(232, 17);
+            this.cbPWHopspital.TabIndex = 0;
+            this.cbPWHopspital.Text = "Check here if the Patient went to a hospital.";
+            this.cbPWHopspital.UseVisualStyleBackColor = true;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Controls.Add(this.txtAHComments);
+            this.tabPage7.Controls.Add(this.label18);
+            this.tabPage7.Location = new System.Drawing.Point(4, 40);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(482, 279);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "Additional history comments";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // txtAHComments
+            // 
+            this.txtAHComments.Location = new System.Drawing.Point(43, 62);
+            this.txtAHComments.Multiline = true;
+            this.txtAHComments.Name = "txtAHComments";
+            this.txtAHComments.Size = new System.Drawing.Size(379, 99);
+            this.txtAHComments.TabIndex = 1;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(40, 46);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(137, 13);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Additional history comments";
             // 
             // btnReport
             // 
@@ -680,186 +1215,22 @@
             this.btSave.Text = "Save";
             this.btSave.UseVisualStyleBackColor = true;
             // 
-            // label9
+            // flowLayoutPanel1
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(3, 9);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(387, 13);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Check off the item and complete the sentence with the body part...";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(48, 22);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(201, 13);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "ie. the patient struck the steering wheel...";
-            // 
-            // cbSWheel
-            // 
-            this.cbSWheel.AutoSize = true;
-            this.cbSWheel.Location = new System.Drawing.Point(3, 38);
-            this.cbSWheel.Name = "cbSWheel";
-            this.cbSWheel.Size = new System.Drawing.Size(94, 17);
-            this.cbSWheel.TabIndex = 2;
-            this.cbSWheel.Text = "steering wheel";
-            this.cbSWheel.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(3, 62);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(75, 17);
-            this.checkBox2.TabIndex = 3;
-            this.checkBox2.Text = "windshield";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(3, 86);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(86, 17);
-            this.checkBox3.TabIndex = 4;
-            this.checkBox3.Text = "left side door";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(3, 110);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(92, 17);
-            this.checkBox4.TabIndex = 5;
-            this.checkBox4.Text = "right side door";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(3, 134);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(101, 17);
-            this.checkBox5.TabIndex = 6;
-            this.checkBox5.Text = "left side window";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(3, 157);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(107, 17);
-            this.checkBox6.TabIndex = 7;
-            this.checkBox6.Text = "right side window";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(3, 181);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(44, 17);
-            this.checkBox7.TabIndex = 8;
-            this.checkBox7.Text = "roof";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            // 
-            // checkBox8
-            // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(3, 205);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(76, 17);
-            this.checkBox8.TabIndex = 9;
-            this.checkBox8.Text = "dashboard";
-            this.checkBox8.UseVisualStyleBackColor = true;
-            // 
-            // checkBox9
-            // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(2, 230);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(188, 17);
-            this.checkBox9.TabIndex = 10;
-            this.checkBox9.Text = "other.. enter a complete sentence.";
-            this.checkBox9.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(184, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(279, 20);
-            this.textBox1.TabIndex = 11;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(184, 60);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(279, 20);
-            this.textBox2.TabIndex = 12;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(184, 84);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(279, 20);
-            this.textBox3.TabIndex = 13;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(184, 133);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(279, 20);
-            this.textBox4.TabIndex = 14;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(184, 155);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(279, 20);
-            this.textBox5.TabIndex = 15;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(184, 178);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(279, 20);
-            this.textBox6.TabIndex = 16;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(184, 203);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(279, 20);
-            this.textBox7.TabIndex = 17;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(184, 227);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(279, 20);
-            this.textBox8.TabIndex = 18;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(184, 109);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(279, 20);
-            this.textBox9.TabIndex = 19;
+            this.flowLayoutPanel1.Controls.Add(this.tabInit);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(234, 106);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(541, 338);
+            this.flowLayoutPanel1.TabIndex = 20;
             // 
             // Initial_Exam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.btSave);
             this.Controls.Add(this.btnReport);
-            this.Controls.Add(this.tabInit);
             this.Controls.Add(this.lbSection);
             this.Controls.Add(this.lblPost);
             this.Controls.Add(this.lblProvince);
@@ -886,8 +1257,8 @@
             this.tabPage2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.gbDriver.ResumeLayout(false);
+            this.gbDriver.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.gbFacing.ResumeLayout(false);
@@ -896,6 +1267,15 @@
             this.gbBrace.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -927,7 +1307,7 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gbDriver;
         private System.Windows.Forms.RadioButton rbBHands;
         private System.Windows.Forms.RadioButton rbRHand;
         private System.Windows.Forms.RadioButton rbLHand;
@@ -938,12 +1318,8 @@
         private System.Windows.Forms.RadioButton rbRRPassenger;
         private System.Windows.Forms.RadioButton rbFPassenger;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.CheckedListBox clbFCollision;
         private System.Windows.Forms.CheckBox cbStruckBy;
         private System.Windows.Forms.CheckBox cbStrick;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.CheckedListBox clbSCollision;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox gbFacing;
         private System.Windows.Forms.RadioButton rbFRight;
         private System.Windows.Forms.RadioButton rbFLeft;
@@ -975,5 +1351,39 @@
         private System.Windows.Forms.CheckBox cbSWheel;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TextBox txtOther;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.CheckBox cbEmergency;
+        private System.Windows.Forms.CheckBox cbABDeploy;
+        private System.Windows.Forms.CheckBox cbSeatBelt;
+        private System.Windows.Forms.CheckBox cbAbag;
+        private System.Windows.Forms.TextBox txtPFelt;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox cbbPFelt;
+        private System.Windows.Forms.CheckBox cbSBack;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TextBox txtOTreat;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ListBox lbTreatment;
+        private System.Windows.Forms.ComboBox cbbTBy;
+        private System.Windows.Forms.ComboBox cbbWtoHospital;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.RadioButton rbAmitNo;
+        private System.Windows.Forms.RadioButton rbAmitYes;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.CheckBox cbPWHopspital;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.TextBox txtAHComments;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ComboBox cbSCollision;
+        private System.Windows.Forms.ComboBox cbFCollision;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

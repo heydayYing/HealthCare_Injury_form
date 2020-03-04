@@ -42,19 +42,7 @@ namespace HealthCare_Injury_Form
             lblProvince.Text = this.patient.Province;
             lblPost.Text = this.patient.Postal;
             
-        }
-
-
-        private Control initialTab()
-        {
-            var initialTabl = new TabControl();
-            initialTabl.Location = new Point(270,139);
-            initialTabl.Size = new Size(468, 238);
-            TabPage page1 = new TabPage { Text="Date"};
-            page1.Controls.Add(new Label { Text = "Initial Exam date.." });
-            page1.Controls.Add(new TextBox { Name = "exam_date" });
-            initialTabl.Controls.Add(page1);
-            return initialTabl;
+            
         }
 
         private void lbSection_SelectedIndexChanged(object sender, EventArgs e)
@@ -63,11 +51,29 @@ namespace HealthCare_Injury_Form
             switch (index)
             {
                 case 0:
-                    this.Controls.Add(initialTab());
+                    this.flowLayoutPanel1.Controls.Add(this.tabInit);
+                    break;
+
+                case 1:
+                    this.flowLayoutPanel1.Controls.Clear();
                     break;
 
 
             }
+        }
+
+        private void rbDriver_CheckedChanged(object sender, EventArgs e)
+        {
+
+                if (!rbDriver.Checked)
+                {
+                    foreach (Control rbControl in gbDriver.Controls)
+                    {
+                         rbControl.Enabled = false;
+                        ((RadioButton)rbControl).Checked = false;
+                    }
+                }
+            
         }
     }
 }
