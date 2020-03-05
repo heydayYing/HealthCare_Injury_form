@@ -50,7 +50,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbPosition = new System.Windows.Forms.GroupBox();
             this.rbLRPassenger = new System.Windows.Forms.RadioButton();
             this.rbRRPassenger = new System.Windows.Forms.RadioButton();
             this.rbFPassenger = new System.Windows.Forms.RadioButton();
@@ -133,7 +133,7 @@
             this.tabInit.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbPosition.SuspendLayout();
             this.gbDriver.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.gbFacing.SuspendLayout();
@@ -356,7 +356,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.groupBox1);
+            this.tabPage2.Controls.Add(this.gbPosition);
             this.tabPage2.Location = new System.Drawing.Point(4, 40);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -365,20 +365,21 @@
             this.tabPage2.Text = "Position";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // gbPosition
             // 
-            this.groupBox1.Controls.Add(this.rbLRPassenger);
-            this.groupBox1.Controls.Add(this.rbRRPassenger);
-            this.groupBox1.Controls.Add(this.rbFPassenger);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.gbDriver);
-            this.groupBox1.Controls.Add(this.rbDriver);
-            this.groupBox1.Location = new System.Drawing.Point(6, 28);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(470, 196);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Indicate the patient\'s position in the vehicle:";
+            this.gbPosition.Controls.Add(this.rbLRPassenger);
+            this.gbPosition.Controls.Add(this.rbRRPassenger);
+            this.gbPosition.Controls.Add(this.rbFPassenger);
+            this.gbPosition.Controls.Add(this.label6);
+            this.gbPosition.Controls.Add(this.gbDriver);
+            this.gbPosition.Controls.Add(this.rbDriver);
+            this.gbPosition.Location = new System.Drawing.Point(6, 28);
+            this.gbPosition.Name = "gbPosition";
+            this.gbPosition.Size = new System.Drawing.Size(470, 196);
+            this.gbPosition.TabIndex = 0;
+            this.gbPosition.TabStop = false;
+            this.gbPosition.Text = "Indicate the patient\'s position in the vehicle:";
+            this.gbPosition.Enter += new System.EventHandler(this.gbPosition_Enter);
             // 
             // rbLRPassenger
             // 
@@ -488,7 +489,7 @@
             this.rbDriver.TabStop = true;
             this.rbDriver.Text = "driver";
             this.rbDriver.UseVisualStyleBackColor = true;
-            this.rbDriver.CheckedChanged += new System.EventHandler(this.rbDriver_CheckedChanged);
+            this.rbDriver.CheckedChanged += new System.EventHandler(this.gbPosition_Enter);
             // 
             // tabPage3
             // 
@@ -1255,8 +1256,8 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbPosition.ResumeLayout(false);
+            this.gbPosition.PerformLayout();
             this.gbDriver.ResumeLayout(false);
             this.gbDriver.PerformLayout();
             this.tabPage3.ResumeLayout(false);
@@ -1305,7 +1306,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbPosition;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox gbDriver;
         private System.Windows.Forms.RadioButton rbBHands;

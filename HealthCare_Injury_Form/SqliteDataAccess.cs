@@ -34,6 +34,51 @@ namespace HealthCare_Injury_Form
                     age INT)";
             cmd.ExecuteNonQuery();
             
+            cmd.CommandText= @"CREATE TABLE IF NOT EXISTS InitExam (
+
+    iExamID   INTEGER PRIMARY KEY AUTOINCREMENT,
+
+    personID  INTEGER NOT NULL UNIQUE,
+
+    initExamDate  DATE,
+	postion   TEXT,
+	handsOn   TEXT,
+	StrikeOther   BOOL,
+	StruckBy  BOOL,
+	firstCollision    TEXT,
+	secondCollistion  TEXT,
+	seatBeltWear  BOOL,
+	braceFImpact  BOOL,
+	facingImpact  TEXT,
+	steerWheel    TEXT,
+	windshield    TEXT,
+	leftSDoor TEXT,
+	rightSDoor    TEXT,
+	leftSWindow   TEXT,
+	rightSWindow  TEXT,
+	roof  TEXT,
+	dashboard TEXT,
+	otherItem TEXT,
+	sBackBrokenOBend  BOOL,
+	noAirBag  BOOL,
+	vSeatBeltSign BOOL,
+	airBagDeployed    BOOL,
+	jawOLife  BOOL,
+	immFelt   TEXT,
+	extendFelt    TEXT,
+	otherFelt TEXT,
+	wentHosp  BOOL,
+	HospName  TEXT,
+	amitTHos  BOOL,
+	duration  TEXT,
+	whenTHos  TEXT,
+	transport TEXT,
+	treatments    BLOB,
+	otherTreatments   TEXT,
+	aComment  TEXT,
+	FOREIGN KEY(personID) REFERENCES people(id)
+)";
+            cmd.ExecuteNonQuery();
             database.Close();
             Console.WriteLine("Table people created");
         }

@@ -41,9 +41,9 @@ namespace HealthCare_Injury_Form
             lblCity.Text = this.patient.City;
             lblProvince.Text = this.patient.Province;
             lblPost.Text = this.patient.Postal;
-            
-            
-        }
+
+        
+            }
 
         private void lbSection_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -51,6 +51,7 @@ namespace HealthCare_Injury_Form
             switch (index)
             {
                 case 0:
+                    this.flowLayoutPanel1.Controls.Clear();
                     this.flowLayoutPanel1.Controls.Add(this.tabInit);
                     break;
 
@@ -62,18 +63,25 @@ namespace HealthCare_Injury_Form
             }
         }
 
-        private void rbDriver_CheckedChanged(object sender, EventArgs e)
+        /*
+         * When user click the driver button in Position tabpage, the hands position buttons enabled. otherwise they are disabled.   
+         */
+        private void gbPosition_Enter(object sender, EventArgs e)
         {
-
-                if (!rbDriver.Checked)
+            if(rbDriver.Checked)
+            {
+                foreach (Control rbControl in gbDriver.Controls)
                 {
-                    foreach (Control rbControl in gbDriver.Controls)
-                    {
-                         rbControl.Enabled = false;
-                        ((RadioButton)rbControl).Checked = false;
-                    }
+                    rbControl.Enabled = true;
                 }
-            
+            }
+            else{
+                foreach (Control rbControl in gbDriver.Controls)
+                {
+                    rbControl.Enabled = false;
+                    ((RadioButton)rbControl).Checked = false;
+                }
+            }
         }
     }
 }
