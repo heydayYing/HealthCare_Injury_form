@@ -102,11 +102,7 @@
     <Compile Include="Initial_Exam.Designer.cs">
       <DependentUpon>Initial_Exam.cs</DependentUpon>
     </Compile>
-    <Compile Include="Init_Exam.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Init_Exam.dbml</DependentUpon>
-    </Compile>
+    <Compile Include="init_Exam.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,9 +129,6 @@
     <EmbeddedResource Include="Initial_Exam.resx">
       <DependentUpon>Initial_Exam.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Init_Exam.dbml.layout">
-      <DependentUpon>Init_Exam.dbml</DependentUpon>
-    </None>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,11 +148,6 @@
       <DependentUpon>Registration.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="HealthCareDB.db" />
-    <None Include="Init_Exam.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>Init_Exam.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -35,49 +35,46 @@ namespace HealthCare_Injury_Form
             cmd.ExecuteNonQuery();
             
             cmd.CommandText= @"CREATE TABLE IF NOT EXISTS InitExam (
-
-    iExamID   INTEGER PRIMARY KEY AUTOINCREMENT,
-
-    personID  INTEGER NOT NULL UNIQUE,
-
-    initExamDate  DATE,
-	postion   TEXT,
-	handsOn   TEXT,
-	StrikeOther   BOOL,
-	StruckBy  BOOL,
-	firstCollision    TEXT,
-	secondCollistion  TEXT,
-	seatBeltWear  BOOL,
-	braceFImpact  BOOL,
-	facingImpact  TEXT,
-	steerWheel    TEXT,
-	windshield    TEXT,
-	leftSDoor TEXT,
-	rightSDoor    TEXT,
-	leftSWindow   TEXT,
-	rightSWindow  TEXT,
-	roof  TEXT,
-	dashboard TEXT,
-	otherItem TEXT,
-	sBackBrokenOBend  BOOL,
-	noAirBag  BOOL,
-	vSeatBeltSign BOOL,
-	airBagDeployed    BOOL,
-	jawOLife  BOOL,
-	immFelt   TEXT,
-	extendFelt    TEXT,
-	otherFelt TEXT,
-	wentHosp  BOOL,
-	HospName  TEXT,
-	amitTHos  BOOL,
-	duration  TEXT,
-	whenTHos  TEXT,
-	transport TEXT,
-	treatments    BLOB,
-	otherTreatments   TEXT,
-	aComment  TEXT,
-	FOREIGN KEY(personID) REFERENCES people(id)
-)";
+                    iExamID   INTEGER PRIMARY KEY AUTOINCREMENT,
+                    personID  INTEGER NOT NULL UNIQUE,
+                    initExamDate  DATE,
+	                position   TEXT,
+	                handsOn   TEXT,
+	                StrikeOther   BOOL,
+	                StruckBy  BOOL,
+	                firstCollision    TEXT,
+	                secondCollision  TEXT,
+	                seatBeltWear  BOOL,
+	                braceFImpact  TEXT,
+	                facingImpact  TEXT,
+	                steerWheel    TEXT,
+	                windshield    TEXT,
+	                leftSDoor TEXT,
+	                rightSDoor    TEXT,
+	                leftSWindow   TEXT,
+	                rightSWindow  TEXT,
+	                roof  TEXT,
+	                dashboard TEXT,
+	                otherItem TEXT,
+	                sBackBrokenOBend  BOOL,
+	                noAirBag  BOOL,
+	                vSeatBeltSign BOOL,
+	                airBagDeployed    BOOL,
+	                jawOLife  BOOL,
+	                immFelt   TEXT,
+	                extendFelt    TEXT,
+	                otherFelt TEXT,
+	                wentHosp  BOOL,
+	                HospName  TEXT,
+	                amitTHos  BOOL,
+	                duration  TEXT,
+	                whenTHos  TEXT,
+	                transport TEXT,
+	                treatments    BLOB,
+	                otherTreatments   TEXT,
+	                aComment  TEXT,
+	                FOREIGN KEY(personID) REFERENCES people(id)
+                )";
             cmd.ExecuteNonQuery();
             database.Close();
             Console.WriteLine("Table people created");
@@ -110,16 +107,45 @@ namespace HealthCare_Injury_Form
             return update;
         }
 
+        //get all patients
         public Array getPatients()
         {
             var patients = database.Query<Patient>("Select * from People ORDER BY fname ASC, lname ASC", new DynamicParameters());
             return patients.ToArray();
         }
 
+        //get one patient with given id
         public Patient getPatient(int id)
         {
             var patient = database.Query<Patient>("Select * from People Where id ='"+id+"'", new DynamicParameters()).FirstOrDefault();
             return patient;
+        }
+
+        //save or update the init_exam. if the exam has id>0, save it. otherwise update it
+        public int saveInit_exam(init_Exam exam)
+        {
+            string sqlSave = "Insert INTO InitExam(personID, initExamDate, position, handsOn, StrikeOther, StruckBy, firstCollision, secondCollision, " +
+                "seatBeltWear, braceFImpact, facingImpact, steerWheel, windshield, leftSDoor, rightSDoor, leftSWindow, rightSWindow, roof, dashboard, " +
+                "otherItem, sBackBrokenOBend, noAirBag, vSeatBeltSign, airBagDeployed, jawOLife, immFelt, extendFelt, otherFelt, wentHosp, HospName, " +
+                "amitTHos, duration, whenTHos, transport, treatments, otherTreatments, aComment) Values " +
+                "(@personID, @initExamDate, @position, @handsOn, @strikeOther, @struckBy, @firstCollision, @secondCollision, " +
+                 "@seatBeltWear, @braceFImpact, @facingImpact, @steerWheel, @windshield, @leftSDoor, @rightSDoor, @leftSWindow, @rightSWindow, @roof, @dashboard, " +
+                "@otherItem, @sBackBrokenOBend, @noAirBag, @vSeatBeltSign, @airBagDeployed, @jawOLife, @immFelt, @extendFelt, @otherFelt, @wentHosp, @HospName, " +
+                "@amitTHos, @duration, @whenTHos, @transport, @treatments, @otherTreatments, @aComment); ";
+
+            string sqlUpdate = "Update InitExam SET initExamDate=@initExamDate, position=@position, handsOn=@handsOn, StrikeOther=@strikeOther, StruckBy=@struckBy, firstCollision=@firstCollision, secondCollision=@secondCollision, " +
+                "seatBeltWear=@seatBeltWear, braceFImpact=@braceFImpact, facingImpact=@facingImpact, steerWheel=@steerWheel, windshield=@windshield, leftSDoor=@leftSDoor, rightSDoor=@rightSDoor, leftSWindow=@leftSWindow, rightSWindow=@rightSWindow, roof=@roof, dashboard=@dashboard, " +
+                "otherItem=@otherItem, sBackBrokenOBend=@sBackBrokenOBend, noAirBag=@noAirBag, vSeatBeltSign=@vSeatBeltSign, airBagDeployed=@airBagDeployed, jawOLife=@jawOLife, immFelt=@immFelt, extendFelt=@extendFelt, otherFelt=@otherFelt, wentHosp=@wentHosp, HospName=@HospName, " +
+                "amitTHos=@amitTHos, duration=@duration, whenTHos=@whenTHos, transport=@transport, treatments=@treatments, otherTreatments=@otherTreatments, aComment=@aComment WHERE personID=@personID";
+
+            return GetInitExam(exam.personID)!=null?database.Execute(sqlUpdate,exam):database.Execute(sqlSave, exam);
+        }
+
+        //get init_exam with given personID
+        public init_Exam GetInitExam(int id)
+        {
+            var exam= database.Query<init_Exam>("Select * from InitExam Where personID ='" + id + "'", new DynamicParameters()).FirstOrDefault();
+            return exam;
         }
     }
 }

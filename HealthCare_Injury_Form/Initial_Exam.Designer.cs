@@ -1,4 +1,6 @@
-﻿namespace HealthCare_Injury_Form
+﻿using System;
+
+namespace HealthCare_Injury_Form
 {
     partial class Initial_Exam
     {
@@ -47,14 +49,14 @@
             this.lbSection = new System.Windows.Forms.ListBox();
             this.tabInit = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dpInitExamDate = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.gbPosition = new System.Windows.Forms.GroupBox();
             this.rbLRPassenger = new System.Windows.Forms.RadioButton();
             this.rbRRPassenger = new System.Windows.Forms.RadioButton();
             this.rbFPassenger = new System.Windows.Forms.RadioButton();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblHand = new System.Windows.Forms.Label();
             this.gbDriver = new System.Windows.Forms.GroupBox();
             this.rbBHands = new System.Windows.Forms.RadioButton();
             this.rbRHand = new System.Windows.Forms.RadioButton();
@@ -62,6 +64,8 @@
             this.rbNotChecked = new System.Windows.Forms.RadioButton();
             this.rbDriver = new System.Windows.Forms.RadioButton();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.cbSCollision = new System.Windows.Forms.ComboBox();
             this.cbFCollision = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -110,6 +114,8 @@
             this.cbbPFelt = new System.Windows.Forms.ComboBox();
             this.cbSBack = new System.Windows.Forms.CheckBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.txtOTreat = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -325,10 +331,11 @@
             this.tabInit.SelectedIndex = 0;
             this.tabInit.Size = new System.Drawing.Size(490, 323);
             this.tabInit.TabIndex = 17;
+            this.tabInit.Deselected += new System.Windows.Forms.TabControlEventHandler(this.tabInit_SelectedIndexChanged);
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dateTimePicker1);
+            this.tabPage1.Controls.Add(this.dpInitExamDate);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Location = new System.Drawing.Point(4, 40);
             this.tabPage1.Name = "tabPage1";
@@ -338,12 +345,12 @@
             this.tabPage1.Text = "Initial Date";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // dpInitExamDate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(47, 60);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(223, 20);
-            this.dateTimePicker1.TabIndex = 1;
+            this.dpInitExamDate.Location = new System.Drawing.Point(47, 60);
+            this.dpInitExamDate.Name = "dpInitExamDate";
+            this.dpInitExamDate.Size = new System.Drawing.Size(223, 20);
+            this.dpInitExamDate.TabIndex = 1;
             // 
             // label5
             // 
@@ -370,7 +377,7 @@
             this.gbPosition.Controls.Add(this.rbLRPassenger);
             this.gbPosition.Controls.Add(this.rbRRPassenger);
             this.gbPosition.Controls.Add(this.rbFPassenger);
-            this.gbPosition.Controls.Add(this.label6);
+            this.gbPosition.Controls.Add(this.lblHand);
             this.gbPosition.Controls.Add(this.gbDriver);
             this.gbPosition.Controls.Add(this.rbDriver);
             this.gbPosition.Location = new System.Drawing.Point(6, 28);
@@ -414,14 +421,14 @@
             this.rbFPassenger.Text = "a passenger seated in the Front";
             this.rbFPassenger.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // lblHand
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(60, 39);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(137, 13);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "◦ Hands on steering wheel?";
+            this.lblHand.AutoSize = true;
+            this.lblHand.Location = new System.Drawing.Point(60, 39);
+            this.lblHand.Name = "lblHand";
+            this.lblHand.Size = new System.Drawing.Size(137, 13);
+            this.lblHand.TabIndex = 2;
+            this.lblHand.Text = "◦ Hands on steering wheel?";
             // 
             // gbDriver
             // 
@@ -493,6 +500,8 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label19);
+            this.tabPage3.Controls.Add(this.label8);
             this.tabPage3.Controls.Add(this.cbSCollision);
             this.tabPage3.Controls.Add(this.cbFCollision);
             this.tabPage3.Controls.Add(this.label7);
@@ -508,6 +517,24 @@
             this.tabPage3.Text = "Head Rotation and angle of Impact";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(219, 83);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(85, 13);
+            this.label19.TabIndex = 14;
+            this.label19.Text = "Second Collision";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(54, 84);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(67, 13);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "First Collision";
+            // 
             // cbSCollision
             // 
             this.cbSCollision.FormattingEnabled = true;
@@ -516,7 +543,7 @@
             "Back",
             "Left",
             "Back"});
-            this.cbSCollision.Location = new System.Drawing.Point(219, 77);
+            this.cbSCollision.Location = new System.Drawing.Point(219, 103);
             this.cbSCollision.Name = "cbSCollision";
             this.cbSCollision.Size = new System.Drawing.Size(121, 21);
             this.cbSCollision.TabIndex = 12;
@@ -530,7 +557,7 @@
             "Back",
             "Left",
             "Right"});
-            this.cbFCollision.Location = new System.Drawing.Point(54, 77);
+            this.cbFCollision.Location = new System.Drawing.Point(54, 103);
             this.cbFCollision.Name = "cbFCollision";
             this.cbFCollision.Size = new System.Drawing.Size(121, 21);
             this.cbFCollision.TabIndex = 11;
@@ -550,12 +577,13 @@
             this.gbFacing.Controls.Add(this.rbFRight);
             this.gbFacing.Controls.Add(this.rbFLeft);
             this.gbFacing.Controls.Add(this.rbFStraight);
-            this.gbFacing.Location = new System.Drawing.Point(36, 189);
+            this.gbFacing.Location = new System.Drawing.Point(36, 214);
             this.gbFacing.Name = "gbFacing";
             this.gbFacing.Size = new System.Drawing.Size(428, 46);
             this.gbFacing.TabIndex = 9;
             this.gbFacing.TabStop = false;
             this.gbFacing.Text = "Which way were you facing at impact.";
+
             // 
             // rbFRight
             // 
@@ -595,7 +623,7 @@
             this.gbBrace.Controls.Add(this.rbBFeet);
             this.gbBrace.Controls.Add(this.rbBHand);
             this.gbBrace.Controls.Add(this.rbBNo);
-            this.gbBrace.Location = new System.Drawing.Point(36, 137);
+            this.gbBrace.Location = new System.Drawing.Point(36, 162);
             this.gbBrace.Name = "gbBrace";
             this.gbBrace.Size = new System.Drawing.Size(428, 46);
             this.gbBrace.TabIndex = 8;
@@ -638,7 +666,7 @@
             // cbSBelt
             // 
             this.cbSBelt.AutoSize = true;
-            this.cbSBelt.Location = new System.Drawing.Point(36, 114);
+            this.cbSBelt.Location = new System.Drawing.Point(36, 139);
             this.cbSBelt.Name = "cbSBelt";
             this.cbSBelt.Size = new System.Drawing.Size(170, 17);
             this.cbSBelt.TabIndex = 7;
@@ -997,6 +1025,8 @@
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.label21);
+            this.tabPage6.Controls.Add(this.label20);
             this.tabPage6.Controls.Add(this.txtOTreat);
             this.tabPage6.Controls.Add(this.label17);
             this.tabPage6.Controls.Add(this.label16);
@@ -1015,6 +1045,24 @@
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Hospital Section";
             this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(39, 152);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(110, 13);
+            this.label21.TabIndex = 14;
+            this.label21.Text = "Patient transported by";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(39, 125);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(152, 13);
+            this.label20.TabIndex = 13;
+            this.label20.Text = "Whent Patient went to hospital";
             // 
             // txtOTreat
             // 
@@ -1071,7 +1119,7 @@
             "police car",
             "private transportation",
             "ambulance"});
-            this.cbbTBy.Location = new System.Drawing.Point(32, 152);
+            this.cbbTBy.Location = new System.Drawing.Point(203, 149);
             this.cbbTBy.Name = "cbbTBy";
             this.cbbTBy.Size = new System.Drawing.Size(121, 21);
             this.cbbTBy.TabIndex = 8;
@@ -1086,7 +1134,7 @@
             "two days later",
             " three days later",
             "about a week later"});
-            this.cbbWtoHospital.Location = new System.Drawing.Point(32, 124);
+            this.cbbWtoHospital.Location = new System.Drawing.Point(203, 122);
             this.cbbWtoHospital.Name = "cbbWtoHospital";
             this.cbbWtoHospital.Size = new System.Drawing.Size(252, 21);
             this.cbbWtoHospital.TabIndex = 7;
@@ -1223,6 +1271,8 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(541, 338);
             this.flowLayoutPanel1.TabIndex = 20;
+
+
             // 
             // Initial_Exam
             // 
@@ -1282,6 +1332,8 @@
 
         }
 
+      
+
         #endregion
 
         private System.Windows.Forms.Label lblFName;
@@ -1300,14 +1352,14 @@
         private System.Windows.Forms.Label lblCity;
         private System.Windows.Forms.Label lblProvince;
         private System.Windows.Forms.Label lblPost;
-        private System.Windows.Forms.ListBox lbSection;
+        private System.Windows.Forms.ListBox lbSection= new BuddyListBox();
         private System.Windows.Forms.TabControl tabInit;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dpInitExamDate;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox gbPosition;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblHand;
         private System.Windows.Forms.GroupBox gbDriver;
         private System.Windows.Forms.RadioButton rbBHands;
         private System.Windows.Forms.RadioButton rbRHand;
@@ -1386,5 +1438,9 @@
         private System.Windows.Forms.ComboBox cbFCollision;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
     }
 }
