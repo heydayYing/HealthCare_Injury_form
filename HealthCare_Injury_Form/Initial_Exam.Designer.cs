@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 
 namespace HealthCare_Injury_Form
 {
@@ -81,23 +82,23 @@ namespace HealthCare_Injury_Form
             this.cbStruckBy = new System.Windows.Forms.CheckBox();
             this.cbStrick = new System.Windows.Forms.CheckBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.txtRSDoor = new System.Windows.Forms.TextBox();
+            this.txtOItem = new System.Windows.Forms.TextBox();
+            this.txtDashboard = new System.Windows.Forms.TextBox();
+            this.txtRoof = new System.Windows.Forms.TextBox();
+            this.txtRSWindow = new System.Windows.Forms.TextBox();
+            this.txtLSWindow = new System.Windows.Forms.TextBox();
+            this.txtLSDoor = new System.Windows.Forms.TextBox();
+            this.txtWShield = new System.Windows.Forms.TextBox();
+            this.txtSWheel = new System.Windows.Forms.TextBox();
+            this.cbOItem = new System.Windows.Forms.CheckBox();
+            this.cbDashboard = new System.Windows.Forms.CheckBox();
+            this.cbRoof = new System.Windows.Forms.CheckBox();
+            this.cbRSWindow = new System.Windows.Forms.CheckBox();
+            this.cbLSWindow = new System.Windows.Forms.CheckBox();
+            this.cbRSDoor = new System.Windows.Forms.CheckBox();
+            this.cbLSDoor = new System.Windows.Forms.CheckBox();
+            this.cbWShield = new System.Windows.Forms.CheckBox();
             this.cbSWheel = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -300,6 +301,7 @@ namespace HealthCare_Injury_Form
             // 
             // lbSection
             // 
+            this.lbSection.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.lbSection.FormattingEnabled = true;
             this.lbSection.Items.AddRange(new object[] {
             "Initial Exam and History",
@@ -314,6 +316,8 @@ namespace HealthCare_Injury_Form
             this.lbSection.Name = "lbSection";
             this.lbSection.Size = new System.Drawing.Size(154, 134);
             this.lbSection.TabIndex = 16;
+            this.lbSection.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.ListBox_DrawItem);
+            this.lbSection.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.ListBox_MeasureItem);
             this.lbSection.SelectedIndexChanged += new System.EventHandler(this.lbSection_SelectedIndexChanged);
             // 
             // tabInit
@@ -583,7 +587,6 @@ namespace HealthCare_Injury_Form
             this.gbFacing.TabIndex = 9;
             this.gbFacing.TabStop = false;
             this.gbFacing.Text = "Which way were you facing at impact.";
-
             // 
             // rbFRight
             // 
@@ -695,23 +698,23 @@ namespace HealthCare_Injury_Form
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.textBox9);
-            this.tabPage4.Controls.Add(this.textBox8);
-            this.tabPage4.Controls.Add(this.textBox7);
-            this.tabPage4.Controls.Add(this.textBox6);
-            this.tabPage4.Controls.Add(this.textBox5);
-            this.tabPage4.Controls.Add(this.textBox4);
-            this.tabPage4.Controls.Add(this.textBox3);
-            this.tabPage4.Controls.Add(this.textBox2);
-            this.tabPage4.Controls.Add(this.textBox1);
-            this.tabPage4.Controls.Add(this.checkBox9);
-            this.tabPage4.Controls.Add(this.checkBox8);
-            this.tabPage4.Controls.Add(this.checkBox7);
-            this.tabPage4.Controls.Add(this.checkBox6);
-            this.tabPage4.Controls.Add(this.checkBox5);
-            this.tabPage4.Controls.Add(this.checkBox4);
-            this.tabPage4.Controls.Add(this.checkBox3);
-            this.tabPage4.Controls.Add(this.checkBox2);
+            this.tabPage4.Controls.Add(this.txtRSDoor);
+            this.tabPage4.Controls.Add(this.txtOItem);
+            this.tabPage4.Controls.Add(this.txtDashboard);
+            this.tabPage4.Controls.Add(this.txtRoof);
+            this.tabPage4.Controls.Add(this.txtRSWindow);
+            this.tabPage4.Controls.Add(this.txtLSWindow);
+            this.tabPage4.Controls.Add(this.txtLSDoor);
+            this.tabPage4.Controls.Add(this.txtWShield);
+            this.tabPage4.Controls.Add(this.txtSWheel);
+            this.tabPage4.Controls.Add(this.cbOItem);
+            this.tabPage4.Controls.Add(this.cbDashboard);
+            this.tabPage4.Controls.Add(this.cbRoof);
+            this.tabPage4.Controls.Add(this.cbRSWindow);
+            this.tabPage4.Controls.Add(this.cbLSWindow);
+            this.tabPage4.Controls.Add(this.cbRSDoor);
+            this.tabPage4.Controls.Add(this.cbLSDoor);
+            this.tabPage4.Controls.Add(this.cbWShield);
             this.tabPage4.Controls.Add(this.cbSWheel);
             this.tabPage4.Controls.Add(this.label10);
             this.tabPage4.Controls.Add(this.label9);
@@ -722,148 +725,148 @@ namespace HealthCare_Injury_Form
             this.tabPage4.Text = "Hit Items";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // textBox9
+            // txtRSDoor
             // 
-            this.textBox9.Location = new System.Drawing.Point(184, 109);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(279, 20);
-            this.textBox9.TabIndex = 19;
+            this.txtRSDoor.Location = new System.Drawing.Point(184, 109);
+            this.txtRSDoor.Name = "txtRSDoor";
+            this.txtRSDoor.Size = new System.Drawing.Size(279, 20);
+            this.txtRSDoor.TabIndex = 19;
             // 
-            // textBox8
+            // txtOItem
             // 
-            this.textBox8.Location = new System.Drawing.Point(184, 227);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(279, 20);
-            this.textBox8.TabIndex = 18;
+            this.txtOItem.Location = new System.Drawing.Point(184, 227);
+            this.txtOItem.Name = "txtOItem";
+            this.txtOItem.Size = new System.Drawing.Size(279, 20);
+            this.txtOItem.TabIndex = 18;
             // 
-            // textBox7
+            // txtDashboard
             // 
-            this.textBox7.Location = new System.Drawing.Point(184, 203);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(279, 20);
-            this.textBox7.TabIndex = 17;
+            this.txtDashboard.Location = new System.Drawing.Point(184, 203);
+            this.txtDashboard.Name = "txtDashboard";
+            this.txtDashboard.Size = new System.Drawing.Size(279, 20);
+            this.txtDashboard.TabIndex = 17;
             // 
-            // textBox6
+            // txtRoof
             // 
-            this.textBox6.Location = new System.Drawing.Point(184, 178);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(279, 20);
-            this.textBox6.TabIndex = 16;
+            this.txtRoof.Location = new System.Drawing.Point(184, 178);
+            this.txtRoof.Name = "txtRoof";
+            this.txtRoof.Size = new System.Drawing.Size(279, 20);
+            this.txtRoof.TabIndex = 16;
             // 
-            // textBox5
+            // txtRSWindow
             // 
-            this.textBox5.Location = new System.Drawing.Point(184, 155);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(279, 20);
-            this.textBox5.TabIndex = 15;
+            this.txtRSWindow.Location = new System.Drawing.Point(184, 155);
+            this.txtRSWindow.Name = "txtRSWindow";
+            this.txtRSWindow.Size = new System.Drawing.Size(279, 20);
+            this.txtRSWindow.TabIndex = 15;
             // 
-            // textBox4
+            // txtLSWindow
             // 
-            this.textBox4.Location = new System.Drawing.Point(184, 133);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(279, 20);
-            this.textBox4.TabIndex = 14;
+            this.txtLSWindow.Location = new System.Drawing.Point(184, 133);
+            this.txtLSWindow.Name = "txtLSWindow";
+            this.txtLSWindow.Size = new System.Drawing.Size(279, 20);
+            this.txtLSWindow.TabIndex = 14;
             // 
-            // textBox3
+            // txtLSDoor
             // 
-            this.textBox3.Location = new System.Drawing.Point(184, 84);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(279, 20);
-            this.textBox3.TabIndex = 13;
+            this.txtLSDoor.Location = new System.Drawing.Point(184, 84);
+            this.txtLSDoor.Name = "txtLSDoor";
+            this.txtLSDoor.Size = new System.Drawing.Size(279, 20);
+            this.txtLSDoor.TabIndex = 13;
             // 
-            // textBox2
+            // txtWShield
             // 
-            this.textBox2.Location = new System.Drawing.Point(184, 60);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(279, 20);
-            this.textBox2.TabIndex = 12;
+            this.txtWShield.Location = new System.Drawing.Point(184, 60);
+            this.txtWShield.Name = "txtWShield";
+            this.txtWShield.Size = new System.Drawing.Size(279, 20);
+            this.txtWShield.TabIndex = 12;
             // 
-            // textBox1
+            // txtSWheel
             // 
-            this.textBox1.Location = new System.Drawing.Point(184, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(279, 20);
-            this.textBox1.TabIndex = 11;
+            this.txtSWheel.Location = new System.Drawing.Point(184, 36);
+            this.txtSWheel.Name = "txtSWheel";
+            this.txtSWheel.Size = new System.Drawing.Size(279, 20);
+            this.txtSWheel.TabIndex = 11;
             // 
-            // checkBox9
+            // cbOItem
             // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(2, 230);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(188, 17);
-            this.checkBox9.TabIndex = 10;
-            this.checkBox9.Text = "other.. enter a complete sentence.";
-            this.checkBox9.UseVisualStyleBackColor = true;
+            this.cbOItem.AutoSize = true;
+            this.cbOItem.Location = new System.Drawing.Point(2, 230);
+            this.cbOItem.Name = "cbOItem";
+            this.cbOItem.Size = new System.Drawing.Size(188, 17);
+            this.cbOItem.TabIndex = 10;
+            this.cbOItem.Text = "other.. enter a complete sentence.";
+            this.cbOItem.UseVisualStyleBackColor = true;
             // 
-            // checkBox8
+            // cbDashboard
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(3, 205);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(76, 17);
-            this.checkBox8.TabIndex = 9;
-            this.checkBox8.Text = "dashboard";
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.cbDashboard.AutoSize = true;
+            this.cbDashboard.Location = new System.Drawing.Point(3, 205);
+            this.cbDashboard.Name = "cbDashboard";
+            this.cbDashboard.Size = new System.Drawing.Size(76, 17);
+            this.cbDashboard.TabIndex = 9;
+            this.cbDashboard.Text = "dashboard";
+            this.cbDashboard.UseVisualStyleBackColor = true;
             // 
-            // checkBox7
+            // cbRoof
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(3, 181);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(44, 17);
-            this.checkBox7.TabIndex = 8;
-            this.checkBox7.Text = "roof";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.cbRoof.AutoSize = true;
+            this.cbRoof.Location = new System.Drawing.Point(3, 181);
+            this.cbRoof.Name = "cbRoof";
+            this.cbRoof.Size = new System.Drawing.Size(44, 17);
+            this.cbRoof.TabIndex = 8;
+            this.cbRoof.Text = "roof";
+            this.cbRoof.UseVisualStyleBackColor = true;
             // 
-            // checkBox6
+            // cbRSWindow
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(3, 157);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(107, 17);
-            this.checkBox6.TabIndex = 7;
-            this.checkBox6.Text = "right side window";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.cbRSWindow.AutoSize = true;
+            this.cbRSWindow.Location = new System.Drawing.Point(3, 157);
+            this.cbRSWindow.Name = "cbRSWindow";
+            this.cbRSWindow.Size = new System.Drawing.Size(107, 17);
+            this.cbRSWindow.TabIndex = 7;
+            this.cbRSWindow.Text = "right side window";
+            this.cbRSWindow.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // cbLSWindow
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(3, 134);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(101, 17);
-            this.checkBox5.TabIndex = 6;
-            this.checkBox5.Text = "left side window";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.cbLSWindow.AutoSize = true;
+            this.cbLSWindow.Location = new System.Drawing.Point(3, 134);
+            this.cbLSWindow.Name = "cbLSWindow";
+            this.cbLSWindow.Size = new System.Drawing.Size(101, 17);
+            this.cbLSWindow.TabIndex = 6;
+            this.cbLSWindow.Text = "left side window";
+            this.cbLSWindow.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // cbRSDoor
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(3, 110);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(92, 17);
-            this.checkBox4.TabIndex = 5;
-            this.checkBox4.Text = "right side door";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.cbRSDoor.AutoSize = true;
+            this.cbRSDoor.Location = new System.Drawing.Point(3, 110);
+            this.cbRSDoor.Name = "cbRSDoor";
+            this.cbRSDoor.Size = new System.Drawing.Size(92, 17);
+            this.cbRSDoor.TabIndex = 5;
+            this.cbRSDoor.Text = "right side door";
+            this.cbRSDoor.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // cbLSDoor
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(3, 86);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(86, 17);
-            this.checkBox3.TabIndex = 4;
-            this.checkBox3.Text = "left side door";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.cbLSDoor.AutoSize = true;
+            this.cbLSDoor.Location = new System.Drawing.Point(3, 86);
+            this.cbLSDoor.Name = "cbLSDoor";
+            this.cbLSDoor.Size = new System.Drawing.Size(86, 17);
+            this.cbLSDoor.TabIndex = 4;
+            this.cbLSDoor.Text = "left side door";
+            this.cbLSDoor.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // cbWShield
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(3, 62);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(75, 17);
-            this.checkBox2.TabIndex = 3;
-            this.checkBox2.Text = "windshield";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.cbWShield.AutoSize = true;
+            this.cbWShield.Location = new System.Drawing.Point(3, 62);
+            this.cbWShield.Name = "cbWShield";
+            this.cbWShield.Size = new System.Drawing.Size(75, 17);
+            this.cbWShield.TabIndex = 3;
+            this.cbWShield.Text = "windshield";
+            this.cbWShield.UseVisualStyleBackColor = true;
             // 
             // cbSWheel
             // 
@@ -1271,8 +1274,6 @@ namespace HealthCare_Injury_Form
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(541, 338);
             this.flowLayoutPanel1.TabIndex = 20;
-
-
             // 
             // Initial_Exam
             // 
@@ -1334,6 +1335,8 @@ namespace HealthCare_Injury_Form
 
       
 
+
+
         #endregion
 
         private System.Windows.Forms.Label lblFName;
@@ -1352,7 +1355,7 @@ namespace HealthCare_Injury_Form
         private System.Windows.Forms.Label lblCity;
         private System.Windows.Forms.Label lblProvince;
         private System.Windows.Forms.Label lblPost;
-        private System.Windows.Forms.ListBox lbSection= new BuddyListBox();
+        private System.Windows.Forms.ListBox lbSection;
         private System.Windows.Forms.TabControl tabInit;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DateTimePicker dpInitExamDate;
@@ -1384,23 +1387,23 @@ namespace HealthCare_Injury_Form
         private System.Windows.Forms.CheckBox cbSBelt;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Button btSave;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.TextBox txtRSDoor;
+        private System.Windows.Forms.TextBox txtOItem;
+        private System.Windows.Forms.TextBox txtDashboard;
+        private System.Windows.Forms.TextBox txtRoof;
+        private System.Windows.Forms.TextBox txtRSWindow;
+        private System.Windows.Forms.TextBox txtLSWindow;
+        private System.Windows.Forms.TextBox txtLSDoor;
+        private System.Windows.Forms.TextBox txtWShield;
+        private System.Windows.Forms.TextBox txtSWheel;
+        private System.Windows.Forms.CheckBox cbOItem;
+        private System.Windows.Forms.CheckBox cbDashboard;
+        private System.Windows.Forms.CheckBox cbRoof;
+        private System.Windows.Forms.CheckBox cbRSWindow;
+        private System.Windows.Forms.CheckBox cbLSWindow;
+        private System.Windows.Forms.CheckBox cbRSDoor;
+        private System.Windows.Forms.CheckBox cbLSDoor;
+        private System.Windows.Forms.CheckBox cbWShield;
         private System.Windows.Forms.CheckBox cbSWheel;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
