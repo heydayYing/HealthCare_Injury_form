@@ -70,7 +70,7 @@ namespace HealthCare_Injury_Form
 	                duration  TEXT,
 	                whenTHos  TEXT,
 	                transport TEXT,
-	                treatments    BLOB,
+	                treatments    TEXT,
 	                otherTreatments   TEXT,
 	                aComment  TEXT,
 	                FOREIGN KEY(personID) REFERENCES people(id)

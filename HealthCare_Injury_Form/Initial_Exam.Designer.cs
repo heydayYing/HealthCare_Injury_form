@@ -65,10 +65,10 @@ namespace HealthCare_Injury_Form
             this.rbNotChecked = new System.Windows.Forms.RadioButton();
             this.rbDriver = new System.Windows.Forms.RadioButton();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.lbSCollision = new System.Windows.Forms.ListBox();
+            this.lbFCollosion = new System.Windows.Forms.ListBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.cbSCollision = new System.Windows.Forms.ComboBox();
-            this.cbFCollision = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.gbFacing = new System.Windows.Forms.GroupBox();
             this.rbFRight = new System.Windows.Forms.RadioButton();
@@ -103,6 +103,7 @@ namespace HealthCare_Injury_Form
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.lbPFeel = new System.Windows.Forms.ListBox();
             this.txtOther = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -112,7 +113,6 @@ namespace HealthCare_Injury_Form
             this.cbAbag = new System.Windows.Forms.CheckBox();
             this.txtPFelt = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.cbbPFelt = new System.Windows.Forms.ComboBox();
             this.cbSBack = new System.Windows.Forms.CheckBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.label21 = new System.Windows.Forms.Label();
@@ -123,12 +123,12 @@ namespace HealthCare_Injury_Form
             this.lbTreatment = new System.Windows.Forms.ListBox();
             this.cbbTBy = new System.Windows.Forms.ComboBox();
             this.cbbWtoHospital = new System.Windows.Forms.ComboBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtDuration = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.gpbATHos = new System.Windows.Forms.GroupBox();
             this.rbAmitNo = new System.Windows.Forms.RadioButton();
             this.rbAmitYes = new System.Windows.Forms.RadioButton();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtHosName = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.cbPWHopspital = new System.Windows.Forms.CheckBox();
             this.tabPage7 = new System.Windows.Forms.TabPage();
@@ -148,7 +148,7 @@ namespace HealthCare_Injury_Form
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage6.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.gpbATHos.SuspendLayout();
             this.tabPage7.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -504,10 +504,10 @@ namespace HealthCare_Injury_Form
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.lbSCollision);
+            this.tabPage3.Controls.Add(this.lbFCollosion);
             this.tabPage3.Controls.Add(this.label19);
             this.tabPage3.Controls.Add(this.label8);
-            this.tabPage3.Controls.Add(this.cbSCollision);
-            this.tabPage3.Controls.Add(this.cbFCollision);
             this.tabPage3.Controls.Add(this.label7);
             this.tabPage3.Controls.Add(this.gbFacing);
             this.tabPage3.Controls.Add(this.gbBrace);
@@ -521,10 +521,38 @@ namespace HealthCare_Injury_Form
             this.tabPage3.Text = "Head Rotation and angle of Impact";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // lbSCollision
+            // 
+            this.lbSCollision.FormattingEnabled = true;
+            this.lbSCollision.Items.AddRange(new object[] {
+            "Front",
+            "Back",
+            "Left",
+            "Right"});
+            this.lbSCollision.Location = new System.Drawing.Point(219, 94);
+            this.lbSCollision.Name = "lbSCollision";
+            this.lbSCollision.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.lbSCollision.Size = new System.Drawing.Size(120, 30);
+            this.lbSCollision.TabIndex = 16;
+            // 
+            // lbFCollosion
+            // 
+            this.lbFCollosion.FormattingEnabled = true;
+            this.lbFCollosion.Items.AddRange(new object[] {
+            "Front",
+            "Back",
+            "Left",
+            "Right"});
+            this.lbFCollosion.Location = new System.Drawing.Point(57, 96);
+            this.lbFCollosion.Name = "lbFCollosion";
+            this.lbFCollosion.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.lbFCollosion.Size = new System.Drawing.Size(120, 30);
+            this.lbFCollosion.TabIndex = 15;
+            // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(219, 83);
+            this.label19.Location = new System.Drawing.Point(216, 80);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(85, 13);
             this.label19.TabIndex = 14;
@@ -533,39 +561,11 @@ namespace HealthCare_Injury_Form
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(54, 84);
+            this.label8.Location = new System.Drawing.Point(54, 80);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(67, 13);
             this.label8.TabIndex = 13;
             this.label8.Text = "First Collision";
-            // 
-            // cbSCollision
-            // 
-            this.cbSCollision.FormattingEnabled = true;
-            this.cbSCollision.Items.AddRange(new object[] {
-            "Front",
-            "Back",
-            "Left",
-            "Back"});
-            this.cbSCollision.Location = new System.Drawing.Point(219, 103);
-            this.cbSCollision.Name = "cbSCollision";
-            this.cbSCollision.Size = new System.Drawing.Size(121, 21);
-            this.cbSCollision.TabIndex = 12;
-            this.cbSCollision.Text = "Second Collision";
-            // 
-            // cbFCollision
-            // 
-            this.cbFCollision.FormattingEnabled = true;
-            this.cbFCollision.Items.AddRange(new object[] {
-            "Front",
-            "Back",
-            "Left",
-            "Right"});
-            this.cbFCollision.Location = new System.Drawing.Point(54, 103);
-            this.cbFCollision.Name = "cbFCollision";
-            this.cbFCollision.Size = new System.Drawing.Size(121, 21);
-            this.cbFCollision.TabIndex = 11;
-            this.cbFCollision.Text = "First Collision";
             // 
             // label7
             // 
@@ -899,6 +899,7 @@ namespace HealthCare_Injury_Form
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.lbPFeel);
             this.tabPage5.Controls.Add(this.txtOther);
             this.tabPage5.Controls.Add(this.label13);
             this.tabPage5.Controls.Add(this.label12);
@@ -908,7 +909,6 @@ namespace HealthCare_Injury_Form
             this.tabPage5.Controls.Add(this.cbAbag);
             this.tabPage5.Controls.Add(this.txtPFelt);
             this.tabPage5.Controls.Add(this.label11);
-            this.tabPage5.Controls.Add(this.cbbPFelt);
             this.tabPage5.Controls.Add(this.cbSBack);
             this.tabPage5.Location = new System.Drawing.Point(4, 40);
             this.tabPage5.Name = "tabPage5";
@@ -917,9 +917,26 @@ namespace HealthCare_Injury_Form
             this.tabPage5.Text = "Vehicle status";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // lbPFeel
+            // 
+            this.lbPFeel.FormattingEnabled = true;
+            this.lbPFeel.Items.AddRange(new object[] {
+            "dizzy/dazed",
+            "disoriented",
+            "unconscious",
+            "nervous",
+            "nouseous",
+            "upset",
+            "weak"});
+            this.lbPFeel.Location = new System.Drawing.Point(39, 155);
+            this.lbPFeel.Name = "lbPFeel";
+            this.lbPFeel.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.lbPFeel.Size = new System.Drawing.Size(404, 43);
+            this.lbPFeel.TabIndex = 11;
+            // 
             // txtOther
             // 
-            this.txtOther.Location = new System.Drawing.Point(74, 231);
+            this.txtOther.Location = new System.Drawing.Point(77, 243);
             this.txtOther.Name = "txtOther";
             this.txtOther.Size = new System.Drawing.Size(369, 20);
             this.txtOther.TabIndex = 10;
@@ -927,7 +944,7 @@ namespace HealthCare_Injury_Form
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(36, 231);
+            this.label13.Location = new System.Drawing.Point(39, 243);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(33, 13);
             this.label13.TabIndex = 9;
@@ -985,7 +1002,7 @@ namespace HealthCare_Injury_Form
             // 
             // txtPFelt
             // 
-            this.txtPFelt.Location = new System.Drawing.Point(189, 195);
+            this.txtPFelt.Location = new System.Drawing.Point(192, 207);
             this.txtPFelt.Name = "txtPFelt";
             this.txtPFelt.Size = new System.Drawing.Size(254, 20);
             this.txtPFelt.TabIndex = 3;
@@ -993,28 +1010,11 @@ namespace HealthCare_Injury_Form
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(33, 198);
+            this.label11.Location = new System.Drawing.Point(36, 210);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(150, 13);
             this.label11.TabIndex = 2;
             this.label11.Text = "He/she also stated that he felt";
-            // 
-            // cbbPFelt
-            // 
-            this.cbbPFelt.FormattingEnabled = true;
-            this.cbbPFelt.Items.AddRange(new object[] {
-            "dizzy/dazed",
-            "disoriented",
-            "unconscious",
-            "nervous",
-            "nouseous",
-            "upset",
-            "weak"});
-            this.cbbPFelt.Location = new System.Drawing.Point(36, 163);
-            this.cbbPFelt.Name = "cbbPFelt";
-            this.cbbPFelt.Size = new System.Drawing.Size(250, 21);
-            this.cbbPFelt.TabIndex = 1;
-            this.cbbPFelt.Text = "Immediately following the accident patient felt";
             // 
             // cbSBack
             // 
@@ -1036,10 +1036,10 @@ namespace HealthCare_Injury_Form
             this.tabPage6.Controls.Add(this.lbTreatment);
             this.tabPage6.Controls.Add(this.cbbTBy);
             this.tabPage6.Controls.Add(this.cbbWtoHospital);
-            this.tabPage6.Controls.Add(this.textBox11);
+            this.tabPage6.Controls.Add(this.txtDuration);
             this.tabPage6.Controls.Add(this.label15);
-            this.tabPage6.Controls.Add(this.groupBox3);
-            this.tabPage6.Controls.Add(this.textBox10);
+            this.tabPage6.Controls.Add(this.gpbATHos);
+            this.tabPage6.Controls.Add(this.txtHosName);
             this.tabPage6.Controls.Add(this.label14);
             this.tabPage6.Controls.Add(this.cbPWHopspital);
             this.tabPage6.Location = new System.Drawing.Point(4, 40);
@@ -1143,12 +1143,12 @@ namespace HealthCare_Injury_Form
             this.cbbWtoHospital.TabIndex = 7;
             this.cbbWtoHospital.Text = "Choose When the patient went to hospital";
             // 
-            // textBox11
+            // txtDuration
             // 
-            this.textBox11.Location = new System.Drawing.Point(287, 86);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(165, 20);
-            this.textBox11.TabIndex = 6;
+            this.txtDuration.Location = new System.Drawing.Point(287, 86);
+            this.txtDuration.Name = "txtDuration";
+            this.txtDuration.Size = new System.Drawing.Size(165, 20);
+            this.txtDuration.TabIndex = 6;
             // 
             // label15
             // 
@@ -1159,16 +1159,16 @@ namespace HealthCare_Injury_Form
             this.label15.TabIndex = 5;
             this.label15.Text = "If yes, how long? (ie. Three Days..)";
             // 
-            // groupBox3
+            // gpbATHos
             // 
-            this.groupBox3.Controls.Add(this.rbAmitNo);
-            this.groupBox3.Controls.Add(this.rbAmitYes);
-            this.groupBox3.Location = new System.Drawing.Point(32, 66);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(232, 40);
-            this.groupBox3.TabIndex = 4;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Was the patient admitted to the hospital?";
+            this.gpbATHos.Controls.Add(this.rbAmitNo);
+            this.gpbATHos.Controls.Add(this.rbAmitYes);
+            this.gpbATHos.Location = new System.Drawing.Point(32, 66);
+            this.gpbATHos.Name = "gpbATHos";
+            this.gpbATHos.Size = new System.Drawing.Size(232, 40);
+            this.gpbATHos.TabIndex = 4;
+            this.gpbATHos.TabStop = false;
+            this.gpbATHos.Text = "Was the patient admitted to the hospital?";
             // 
             // rbAmitNo
             // 
@@ -1192,13 +1192,13 @@ namespace HealthCare_Injury_Form
             this.rbAmitYes.Text = "Yes";
             this.rbAmitYes.UseVisualStyleBackColor = true;
             // 
-            // textBox10
+            // txtHosName
             // 
-            this.textBox10.Location = new System.Drawing.Point(42, 40);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(413, 20);
-            this.textBox10.TabIndex = 2;
+            this.txtHosName.Location = new System.Drawing.Point(42, 40);
+            this.txtHosName.Multiline = true;
+            this.txtHosName.Name = "txtHosName";
+            this.txtHosName.Size = new System.Drawing.Size(413, 20);
+            this.txtHosName.TabIndex = 2;
             // 
             // label14
             // 
@@ -1266,6 +1266,7 @@ namespace HealthCare_Injury_Form
             this.btSave.TabIndex = 19;
             this.btSave.Text = "Save";
             this.btSave.UseVisualStyleBackColor = true;
+            this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -1323,8 +1324,8 @@ namespace HealthCare_Injury_Form
             this.tabPage5.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.gpbATHos.ResumeLayout(false);
+            this.gpbATHos.PerformLayout();
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -1417,7 +1418,6 @@ namespace HealthCare_Injury_Form
         private System.Windows.Forms.CheckBox cbAbag;
         private System.Windows.Forms.TextBox txtPFelt;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox cbbPFelt;
         private System.Windows.Forms.CheckBox cbSBack;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.TextBox txtOTreat;
@@ -1426,24 +1426,25 @@ namespace HealthCare_Injury_Form
         private System.Windows.Forms.ListBox lbTreatment;
         private System.Windows.Forms.ComboBox cbbTBy;
         private System.Windows.Forms.ComboBox cbbWtoHospital;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtDuration;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox gpbATHos;
         private System.Windows.Forms.RadioButton rbAmitNo;
         private System.Windows.Forms.RadioButton rbAmitYes;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtHosName;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.CheckBox cbPWHopspital;
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.TextBox txtAHComments;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.ComboBox cbSCollision;
-        private System.Windows.Forms.ComboBox cbFCollision;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
+        private ListBox lbSCollision;
+        private ListBox lbFCollosion;
+        private ListBox lbPFeel;
     }
 }

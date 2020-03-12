@@ -64,7 +64,7 @@ namespace HealthCare_Injury_Form
         public string duration { get; set; }
         public string whenTHos { get; set; }
         public string transport { get; set; }
-        public Array treatments { get; set; }
+        public string treatments { get; set; }
         public string otherTreatments { get; set; }
     }
 
